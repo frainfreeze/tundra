@@ -3,12 +3,13 @@
 
 ### examples
 Default layout:
+- no example.
+  
+'Fancy' theme:
 - [This readme](https://frainfreeze.github.io/pandblog/)
 - [Post example](https://frainfreeze.github.io/pandblog/posts/post0.html)
 - [no toc post](https://frainfreeze.github.io/pandblog/posts/post1.html)
-  
-'Fancy' theme:
-- [index](nolink)
+- sweet, right?
 
 ### features
 - minimal dependencies: just the `pandoc` on POSIX systems
@@ -57,14 +58,15 @@ See [pandoc documentation](https://pandoc.org/MANUAL.html#extension-yaml_metadat
 - custom css for index and about page
 - navigation
 - tags
-- tidy up basic css
 - ~~documentation~~
 - ~~demo page~~
-- fancy css template
+- ~~fancy css template~~
 - docs folder option
 - publications
     - tex
     - pdf
+- tidy up basic css
+- tidy up fancy css
 
 ### license
 Public domain.
