@@ -1,16 +1,16 @@
 # pandblog - WIP
 examples:
-- https://frainfreeze.github.io/pandblog/
-- https://frainfreeze.github.io/pandblog/posts/post1.html
+- [This readme](https://frainfreeze.github.io/pandblog/)
+- [Post example](https://frainfreeze.github.io/pandblog/posts/post0.html)
+- [no toc post](https://frainfreeze.github.io/pandblog/posts/post1.html)
 
 install & usage:
 - `sudo apt install pandoc`
 - `chmod +x ./blogit.sh`
 - `./blogit.sh --help`
 
-options:
+yaml configuration available:
 ```yaml
-#yaml configuration available
 ---
 title: ""
 author: ""
@@ -28,4 +28,6 @@ todo:
 - tags
 - tidy up basic css
 - documentation
+- demo page
 - new templates
+- docs folder option
