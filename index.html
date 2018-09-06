@@ -54,45 +54,85 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           <li class="nav-header">Table of Contents</li>
         </ul>
         <ul>
-        <li><a href="#pandblog---wip">pandblog - WIP</a></li>
+        <li><a href="#pandblog---wip">pandblog - WIP</a><ul>
+        <li><a href="#examples">examples</a></li>
+        <li><a href="#features">features</a></li>
+        <li><a href="#install-usage">install &amp; usage</a></li>
+        <li><a href="#configuration">configuration</a></li>
+        <li><a href="#todo">todo</a></li>
+        <li><a href="#license">license</a></li>
+        </ul></li>
         </ul>
         </div>
       </div>
             <div class="span9">
             <h1 id="pandblog---wip">pandblog - WIP</h1>
-<p>examples:</p>
+<p><code>pandblog</code> is simple static website and blog generator writen in shell. pandblog renders HTML pages from markdown using pandoc.</p>
+<h3 id="examples">examples</h3>
+<p>Default layout:</p>
 <ul>
 <li><a href="https://frainfreeze.github.io/pandblog/">This readme</a></li>
 <li><a href="https://frainfreeze.github.io/pandblog/posts/post0.html">Post example</a></li>
 <li><a href="https://frainfreeze.github.io/pandblog/posts/post1.html">no toc post</a></li>
 </ul>
-<p>install &amp; usage:</p>
+<p>'Fancy' theme:</p>
+<ul>
+<li><a href="nolink">index</a></li>
+</ul>
+<h3 id="features">features</h3>
+<ul>
+<li>minimal dependencies: just the <code>pandoc</code> on POSIX systems</li>
+<li>generates light static pages</li>
+<li>blog friendly</li>
+<li>syntax highlighting for over 100 languages, out of the box</li>
+</ul>
+<h3 id="install-usage">install &amp; usage</h3>
+<p>Built and tested on Debian 9. To get the demo page up:</p>
 <ul>
 <li><code>sudo apt install pandoc</code></li>
+<li><code>git clone https://github.com/frainfreeze/pandblog.git</code></li>
 <li><code>chmod +x ./blogit.sh</code></li>
-<li><code>./blogit.sh --help</code></li>
+<li><code>./blogit.sh -b &amp;&amp; xdg-open index.html</code></li>
 </ul>
-<p>yaml configuration available:</p>
+<p>To change index page simply edit this readme or configure <code>blogit.sh</code><br />
+to point at your index.md file. See configuration bellow.</p>
+<p>To make new posts and markdown files to posts folder.</p>
+<p>Run <code>./blogit.sh -h</code> to see available options.</p>
+<h3 id="configuration">configuration</h3>
+<p>There are two types of configuration: per project and per page.<br />
+Per project: on top of <code>blogit.sh</code> are configuration variables.<br />
+You can use them to change page theme, markdown flavor etc.</p>
+<p>Per page: <code>pandoc</code> supports YAML block, this is self-explanatory example:</p>
 <div class="sourceCode"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span class="ot">---</span>
-<span class="fu">title:</span> <span class="st">&quot;&quot;</span>
-<span class="fu">author:</span> <span class="st">&quot;&quot;</span>
+<span class="fu">title:</span> <span class="st">&quot;Example title&quot;</span>
+<span class="fu">author:</span> <span class="st">&quot;author&quot;</span>
 <span class="fu">date:</span> 2000-01-21
-<span class="fu">tags:</span> <span class="kw">[</span><span class="st">&quot;&quot;</span><span class="kw">]</span>
+<span class="fu">tags:</span> <span class="kw">[</span><span class="st">&quot;tag1&quot;</span><span class="kw">,</span><span class="st">&quot;tag2&quot;</span><span class="kw">]</span>
 <span class="fu">toc:</span> false
 <span class="ot">---</span></code></pre></div>
-<p>todo:</p>
+<p>I recommend you to keep the block on the top of the file.<br />
+See <a href="https://pandoc.org/MANUAL.html#extension-yaml_metadata_block">pandoc documentation</a> for more details.</p>
+<h3 id="todo">todo</h3>
 <ul>
-<li>this readme</li>
-<li>index and archive page</li>
-<li>build index and archive independently/custom css?</li>
+<li>index and about page</li>
+<li>make switches actually work, sigh</li>
+<li>build <del>index and</del> about page independently</li>
+<li>custom css for index and about page</li>
 <li>navigation</li>
 <li>tags</li>
 <li>tidy up basic css</li>
-<li>documentation</li>
-<li>demo page</li>
-<li>new templates</li>
+<li><del>documentation</del></li>
+<li><del>demo page</del></li>
+<li>fancy css template</li>
 <li>docs folder option</li>
+<li>publications
+<ul>
+<li>tex</li>
+<li>pdf</li>
+</ul></li>
 </ul>
+<h3 id="license">license</h3>
+<p>Public domain.</p>
             </div>
     </div>
   </div>
