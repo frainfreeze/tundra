@@ -37,13 +37,13 @@ while [ "$1" != "" ]; do
             START_TIME=$(date +%s)
 
             # build index (and about and other independent pages, wip)
-            pandoc -f $MD_FLAVOUR $INDEX -o "index.html" --template $RES_PATH/index.Thtml --css $RES_PATH/style.css --self-contained --toc --toc-depth 3
-            #pandoc -f $MD_FLAVOUR $INDEX -o "about.html" --template $RES_PATH/about.Thtml --css $RES_PATH/style.css --self-contained
+            pandoc -f $MD_FLAVOUR $INDEX -o "index.html" --template $RES_PATH/index.Thtml --css $RES_PATH/style.css --toc --toc-depth 3
+            #pandoc -f $MD_FLAVOUR $INDEX -o "about.html" --template $RES_PATH/about.Thtml --css $RES_PATH/style.css
             
             # build blog
             cd posts
             for f in *.md; do 
-              pandoc -f $MD_FLAVOUR "$f" -s -o "${f%.md}.html" --template $RES_PATH/blog.Thtml --css $RES_PATH/style.css --self-contained --toc --toc-depth 3; 
+              pandoc -f $MD_FLAVOUR "$f" -s -o "${f%.md}.html" --template $RES_PATH/blog.Thtml --css $RES_PATH/style.css --toc --toc-depth 3; 
             done
             cd ..
             END_TIME=$(($(date +%s) - $START_TIME))
