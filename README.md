@@ -34,7 +34,7 @@ Built and tested on Debian 9. To get the demo page up:
 
 ## Themes
 <div align="center">
-    <div class="tg-wrap"><table>
+    <table>
     <tr>
         <th colspan="2">basic</th>
         <th colspan="2">bootstrap</th>
@@ -54,7 +54,7 @@ Built and tested on Debian 9. To get the demo page up:
       <td><a href="https://i.imgur.com/DgwFZTW.png" target="_blank">
             <img alt="spectre theme: post" src="https://i.imgur.com/DgwFZTW.png"></a></td>
     </tr>
-    </table></div>
+    </table>
 </div>
 
 ## Configure
