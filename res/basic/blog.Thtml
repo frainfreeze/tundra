@@ -41,7 +41,7 @@ $endfor$
           <li><p class="navbar-text">$author$</p></li>
           $endfor$
           $if(date)$
-          <li><p class="navbar-text">$date$</p></li>
+          <li><p class="navbar-text date">$date$</p></li>
           $endif$
         </ul>
       </div>

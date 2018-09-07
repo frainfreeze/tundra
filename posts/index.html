@@ -1,0 +1,61 @@
+<head><title>Blog archive</title>
+<script type="text/javascript" src="//code.jquery.com/jquery-1.7.1.js"></script>
+<script type="text/javascript">
+$(function(){
+      
+function sortUnorderedList(ul, sortDescending, sortClass) {
+  if (typeof ul == "string") {
+    ul = document.getElementById(ul);
+  }
+
+  var lis = ul.getElementsByTagName("LI");
+  var vals = [];
+
+  for (var i = 0, l = lis.length; i < l; i++) {
+    vals.push({
+      sortFieldVal: lis[i].getElementsByClassName(sortClass)[0].innerText,
+      val: lis[i].innerHTML
+    });
+  }
+
+  vals.sort(function(a, b) {
+    var nameA = a.sortFieldVal.toLowerCase(),
+      nameB = b.sortFieldVal.toLowerCase()
+    if (nameA < nameB) //sort string ascending
+      return -1
+    if (nameA > nameB)
+      return 1
+    return 0 //default return value (no sorting)
+  });
+
+  if (sortDescending) vals.reverse();
+
+  for (var i = 0, l = lis.length; i < l; i++)
+    lis[i].innerHTML = vals[i].val;
+}
+
+window.onload = function() {
+  var desc = false;
+  document.getElementById("test").onclick = function() {
+    sortUnorderedList("list", desc, "date");
+    desc = !desc;
+    return false;
+  }
+
+  document.getElementById("test1").onclick = function() {
+    sortUnorderedList("list", desc, "post-title");
+    desc = !desc;
+    return false;
+  }
+}
+
+});
+
+</script><link rel="stylesheet" href="../res/basic/style.css"></head>
+<h1>Blog archive</h1>
+<input type="button" id="test" value="sort by date"/>
+<input type="button" id="test1" value="sort by title"/>
+<ul id="list">
+<li><span class="date">2017-01-14</span> - <a href="bookshelf.html"><span class=post-title>Bookshelf</span></a></li>
+<li><span class="date">2018-09-18</span> - <a href="post0.html"><span class=post-title>Markdown cheatsheet</span></a></li>
+</ul>

@@ -1,5 +1,5 @@
 ---
-title: "Test - md cheatsheet"
+title: "Markdown cheatsheet"
 date: 2018-09-18
 tags: ["Test", "Software-engineering", "Hypnotoads"]
 author: "Tomislav (frainfreeze) Kucar"

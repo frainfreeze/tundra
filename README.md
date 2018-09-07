@@ -23,7 +23,6 @@
 - minimal dependencies: just the `pandoc` on unix-like systems
 - generates static content: easy to host anywhere
 - syntax highlighting for over 100 languages, out of the box
-- support for more than 20 types of source files
 - blog friendly
 
 ## Install
@@ -107,6 +106,9 @@ Todo: custom themes, custom page layout.
 - fancy css (spectre?)
 - documentation
 - tags support
+
+**v0.7**
+- support for more than 20 types of source files
   
 ## License
 Public domain.
