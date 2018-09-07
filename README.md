@@ -19,7 +19,7 @@
 
 ## Features
 - single shell script
-- fast and simple to setup and configuration
+- fast and simple to setup and configure
 - minimal dependencies: just the `pandoc` on unix-like systems
 - generates static content: easy to host anywhere
 - syntax highlighting for over 100 languages, out of the box
@@ -42,18 +42,18 @@ Built and tested on Debian 9. To get the demo page up:
         <th colspan="2">spectre</th>
     </tr>
     <tr>
-      <td><a href="https://frainfreeze.github.io/tundra/">
-            <img width="120" alt="basic theme: this readme" src="https://i.imgur.com/tdwMukX.png"></a></td>
-      <td><a href="https://frainfreeze.github.io/tundra/posts/basic-demo-post.html">
-            <img width="120" alt="basic theme: post" src="https://i.imgur.com/qikHdvC.png"></a></td>
-      <td><a href="https://frainfreeze.github.io/tundra/posts/fancy-demo-readme.html">
-            <img width="120" alt="fancy theme: this readme" src="https://i.imgur.com/t6SUJKb.png"></a></td>
-      <td><a href="https://frainfreeze.github.io/tundra/posts/fancy-demo-post.html">
-            <img width="120" alt="fancy theme: post" src="https://i.imgur.com/W87VktF.png"></a></td>
-      <td><a href="https://frainfreeze.github.io/tundra/posts/fancy-demo-readme.html">
-            <img width="120" alt="fancy theme: this readme" src="https://i.imgur.com/t6SUJKb.png"></a></td>
-      <td><a href="https://frainfreeze.github.io/tundra/posts/fancy-demo-post.html">
-            <img width="120" alt="fancy theme: post" src="https://i.imgur.com/W87VktF.png"></a></td>
+      <td><a href="https://i.imgur.com/qzsmGQz.png" target="_blank">
+            <img alt="basic theme: this readme" src="https://i.imgur.com/qzsmGQz.png"></a></td>
+      <td><a href="https://i.imgur.com/VCuzE9p.png" target="_blank">
+            <img alt="basic theme: post" src="https://i.imgur.com/VCuzE9p.png"></a></td>
+      <td><a href="https://i.imgur.com/sOrLoEN.png" target="_blank">
+            <img alt="bootstrap theme: this readme" src="https://i.imgur.com/sOrLoEN.png"></a></td>
+      <td><a href="https://i.imgur.com/tBN3UHi.png" target="_blank">
+            <img alt="bootstrap theme: post" src="https://i.imgur.com/tBN3UHi.png"></a></td>
+      <td><a href="https://i.imgur.com/GhVfJjx.png" target="_blank">
+            <img alt="spectre theme: this readme" src="https://i.imgur.com/GhVfJjx.png"></a></td>
+      <td><a href="https://i.imgur.com/DgwFZTW.png" target="_blank">
+            <img alt="spectre theme: post" src="https://i.imgur.com/DgwFZTW.png"></a></td>
     </tr>
     </table></div>
 </div>
