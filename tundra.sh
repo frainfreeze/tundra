@@ -37,7 +37,7 @@ while [ "$1" != "" ]; do
             START_TIME=$(date +%s)
 
             # build index (and about and other independent pages, wip)
-            pandoc -f $MD_FLAVOUR $INDEX -o "index.html" --template $RES_PATH/index.Thtml --css $RES_PATH/style.css --toc --toc-depth 3
+            pandoc -f $MD_FLAVOUR $INDEX -o "index.html" --template $RES_PATH/index.Thtml --css $RES_PATH/style.css --toc
             #pandoc -f $MD_FLAVOUR $INDEX -o "about.html" --template $RES_PATH/about.Thtml --css $RES_PATH/style.css --self-contained
             
             # build blog

@@ -1,42 +1,65 @@
-# pandblog - WIP
-`pandblog` is simple static website and blog generator writen in shell. pandblog renders HTML pages from markdown using pandoc.
+<h1 align="center">tundra.sh - v0.1</h1>
+<div align="center">
+  <strong>static website, blog and documentation generator</strong>
+</div>
+<div align="center">
+  <code>tundra.sh</code> is written in shell and depends only on pandoc
+</div>
 
-### examples
-Default layout:
-- no example.
-  
-'Fancy' theme:
-- [This readme](https://frainfreeze.github.io/pandblog/)
-- [Post example](https://frainfreeze.github.io/pandblog/posts/post0.html)
-- [no toc post](https://frainfreeze.github.io/pandblog/posts/post1.html)
-- sweet, right?
+<!-- showcase -->
+<center>
+  <table>
+    <tr>
+      <td><a href="https://frainfreeze.github.io/tundra/">
+            <img width="120" alt="basic theme: this readme" src="https://i.imgur.com/tdwMukX.png"></a></td>
+      <td><a href="https://frainfreeze.github.io/tundra/posts/basic-demo-post.html">
+            <img width="120" alt="basic theme: post" src="https://i.imgur.com/qikHdvC.png"></a></td>
+      <td><a href="https://frainfreeze.github.io/tundra/posts/fancy-demo-readme.html">
+            <img width="120" alt="fancy theme: this readme" src="https://i.imgur.com/t6SUJKb.png"></a></td>
+      <td><a href="https://frainfreeze.github.io/tundra/posts/fancy-demo-post.html">
+            <img width="120" alt="fancy theme: post" src="https://i.imgur.com/W87VktF.png"></a></td>
+    </tr>
+  </table>
+</center>
 
-### features
+<p align="center">
+  <a href="#features">Features</a> •
+  <a href="#how-to-use">Install</a> •
+  <a href="#download">Configure</a> •
+  <a href="#credits">Customize</a> •
+  <a href="#related">Roadmap</a> •
+  <a href="#license">License</a>
+</p>
+
+## Features
 - minimal dependencies: just the `pandoc` on POSIX systems
 - generates light static pages
 - blog friendly
 - syntax highlighting for over 100 languages, out of the box
 
-### install & usage
+## Install
 Built and tested on Debian 9. To get the demo page up:
 - `sudo apt install pandoc`
 - `git clone https://github.com/frainfreeze/pandblog.git`
-- `chmod +x ./blogit.sh`
-- `./blogit.sh -b && xdg-open index.html`
+- `chmod a+rx ./tundra.sh`
+- `./tundra.sh -b && xdg-open index.html`
 
-To change index page simply edit this readme or configure `blogit.sh` 
+To change index page simply edit this readme or configure `tundra.sh` 
 to point at your index.md file. See configuration bellow.
 
-To make new posts and markdown files to posts folder.
+To make new blog posts add source files to posts folder.
 
-Run `./blogit.sh -h` to see available options.
+Run `./tundra.sh -h` to see available options.
 
-### configuration
+## Configure
+
+
+## Customize
 There are two types of configuration: per project and per page.
-Per project: on top of `blogit.sh` are configuration variables.
+Per project: on top of `tundra.sh` are configuration variables.
 You can use them to change page theme, markdown flavor etc.
 
-Per page: `pandoc` supports YAML block, this is self-explanatory example:
+Per page: `pandoc` supports YAML blocks, this is self-explanatory example:
 
 ```yaml
 ---
@@ -51,7 +74,7 @@ toc: false
 I recommend you to keep the block on the top of the file. 
 See [pandoc documentation](https://pandoc.org/MANUAL.html#extension-yaml_metadata_block) for more details.
 
-### todo
+## Roadmap
 - index and about page
 - make switches actually work, sigh
 - build ~~index and~~ about page independently
@@ -68,5 +91,5 @@ See [pandoc documentation](https://pandoc.org/MANUAL.html#extension-yaml_metadat
 - tidy up basic css
 - tidy up fancy css
 
-### license
+## License
 Public domain.
