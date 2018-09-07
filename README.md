@@ -4,24 +4,13 @@
 </div>
 <div align="center">
   <code>tundra.sh</code> is written in shell and depends only on pandoc
-<!-- showcase -->
-  <table>
-    <tr>
-      <td><a href="https://frainfreeze.github.io/tundra/">
-            <img width="120" alt="basic theme: this readme" src="https://i.imgur.com/tdwMukX.png"></a></td>
-      <td><a href="https://frainfreeze.github.io/tundra/posts/basic-demo-post.html">
-            <img width="120" alt="basic theme: post" src="https://i.imgur.com/qikHdvC.png"></a></td>
-      <td><a href="https://frainfreeze.github.io/tundra/posts/fancy-demo-readme.html">
-            <img width="120" alt="fancy theme: this readme" src="https://i.imgur.com/t6SUJKb.png"></a></td>
-      <td><a href="https://frainfreeze.github.io/tundra/posts/fancy-demo-post.html">
-            <img width="120" alt="fancy theme: post" src="https://i.imgur.com/W87VktF.png"></a></td>
-    </tr>
-  </table>
+  <img alt="mock-up" src="https://imgur.com/aaBW5Ggl.png">
 </div>
 
 <p align="center">
   <a href="#features">Features</a> •
   <a href="#install">Install</a> •
+  <a href="#themes">Themes</a> •
   <a href="#configure">Configure</a> •
   <a href="#customize">Customize</a> •
   <a href="#roadmap">Roadmap</a> •
@@ -43,6 +32,31 @@ Built and tested on Debian 9. To get the demo page up:
 - Download this repository: `git clone https://github.com/frainfreeze/pandblog.git`
 - Make script executable: `chmod a+rx ./tundra.sh`
 - Run the script and open output in browser: `./tundra.sh -b && xdg-open index.html`
+
+## Themes
+<div align="center">
+    <div class="tg-wrap"><table>
+    <tr>
+        <th colspan="2">basic</th>
+        <th colspan="2">bootstrap</th>
+        <th colspan="2">spectre</th>
+    </tr>
+    <tr>
+      <td><a href="https://frainfreeze.github.io/tundra/">
+            <img width="120" alt="basic theme: this readme" src="https://i.imgur.com/tdwMukX.png"></a></td>
+      <td><a href="https://frainfreeze.github.io/tundra/posts/basic-demo-post.html">
+            <img width="120" alt="basic theme: post" src="https://i.imgur.com/qikHdvC.png"></a></td>
+      <td><a href="https://frainfreeze.github.io/tundra/posts/fancy-demo-readme.html">
+            <img width="120" alt="fancy theme: this readme" src="https://i.imgur.com/t6SUJKb.png"></a></td>
+      <td><a href="https://frainfreeze.github.io/tundra/posts/fancy-demo-post.html">
+            <img width="120" alt="fancy theme: post" src="https://i.imgur.com/W87VktF.png"></a></td>
+      <td><a href="https://frainfreeze.github.io/tundra/posts/fancy-demo-readme.html">
+            <img width="120" alt="fancy theme: this readme" src="https://i.imgur.com/t6SUJKb.png"></a></td>
+      <td><a href="https://frainfreeze.github.io/tundra/posts/fancy-demo-post.html">
+            <img width="120" alt="fancy theme: post" src="https://i.imgur.com/W87VktF.png"></a></td>
+    </tr>
+    </table></div>
+</div>
 
 ## Configure
 There are two types of configuration: per project and per page.
