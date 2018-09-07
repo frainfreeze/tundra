@@ -4,10 +4,7 @@
 </div>
 <div align="center">
   <code>tundra.sh</code> is written in shell and depends only on pandoc
-</div>
-
 <!-- showcase -->
-<center>
   <table>
     <tr>
       <td><a href="https://frainfreeze.github.io/tundra/">
@@ -20,7 +17,7 @@
             <img width="120" alt="fancy theme: post" src="https://i.imgur.com/W87VktF.png"></a></td>
     </tr>
   </table>
-</center>
+</div>
 
 <p align="center">
   <a href="#features">Features</a> •
