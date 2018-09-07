@@ -17,19 +17,18 @@ PAGES=true
 # $_RES points to theme in res folder for $
 # $PAGES contains names of files that will be built into
 # standalone pages and linked into navbar
-ROOT=`pwd`
-INDEX_PATH=$ROOT/README.md
-INDEX_RES=$ROOT/res/basic
+INDEX_PATH=README.md
+INDEX_RES=res/basic
 
-POSTS_PATH=$ROOT/posts
-POSTS_RES=$ROOT/res/bootstrap
+POSTS_PATH=posts
+POSTS_RES=../res/bootstrap
 
-DOCS_PATH=$ROOT/docs
-DOCS_RES=$ROOT/res/bootstrap
+DOCS_PATH=docs
+DOCS_RES=res/bootstrap
 
-PAGES_PATH=$ROOT
+PAGES_PATH=`pwd`
 PAGES_LIST="about.md books.md"
-PAGES_RES=$ROOT/res/basic
+PAGES_RES=../res/basic
 
 #               misc
 # MD_FLAVOUR tells pandoc what markdown flavour to use,
