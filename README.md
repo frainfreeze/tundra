@@ -1,4 +1,4 @@
-<h1 align="center">tundra.sh - v0.1</h1>
+<h1 align="center">tundra.sh - v0.2</h1>
 <div align="center">
   <strong>static website, blog and documentation generator</strong>
 </div>
@@ -24,37 +24,30 @@
 
 <p align="center">
   <a href="#features">Features</a> •
-  <a href="#how-to-use">Install</a> •
-  <a href="#download">Configure</a> •
-  <a href="#credits">Customize</a> •
-  <a href="#related">Roadmap</a> •
+  <a href="#install">Install</a> •
+  <a href="#configure">Configure</a> •
+  <a href="#customize">Customize</a> •
+  <a href="#roadmap">Roadmap</a> •
   <a href="#license">License</a>
 </p>
 
 ## Features
-- minimal dependencies: just the `pandoc` on POSIX systems
-- generates light static pages
-- blog friendly
+- single shell script
+- fast and simple to setup and configuration
+- minimal dependencies: just the `pandoc` on unix-like systems
+- generates static content: easy to host anywhere
 - syntax highlighting for over 100 languages, out of the box
+- support for more than 20 types of source files
+- blog friendly
 
 ## Install
 Built and tested on Debian 9. To get the demo page up:
-- `sudo apt install pandoc`
-- `git clone https://github.com/frainfreeze/pandblog.git`
-- `chmod a+rx ./tundra.sh`
-- `./tundra.sh -b && xdg-open index.html`
-
-To change index page simply edit this readme or configure `tundra.sh` 
-to point at your index.md file. See configuration bellow.
-
-To make new blog posts add source files to posts folder.
-
-Run `./tundra.sh -h` to see available options.
+- Install pandoc: `sudo apt install pandoc`
+- Download this repository: `git clone https://github.com/frainfreeze/pandblog.git`
+- Make script executable: `chmod a+rx ./tundra.sh`
+- Run the script and open output in browser: `./tundra.sh -b && xdg-open index.html`
 
 ## Configure
-
-
-## Customize
 There are two types of configuration: per project and per page.
 Per project: on top of `tundra.sh` are configuration variables.
 You can use them to change page theme, markdown flavor etc.
@@ -74,22 +67,35 @@ toc: false
 I recommend you to keep the block on the top of the file. 
 See [pandoc documentation](https://pandoc.org/MANUAL.html#extension-yaml_metadata_block) for more details.
 
-## Roadmap
-- index and about page
-- make switches actually work, sigh
-- build ~~index and~~ about page independently
-- custom css for index and about page
-- navigation
-- tags
-- ~~documentation~~
-- ~~demo page~~
-- ~~fancy css template~~
-- docs folder option
-- publications
-    - tex
-    - pdf
-- tidy up basic css
-- tidy up fancy css
+## Customize
+To change index page simply edit this readme or configure `tundra.sh` 
+to point at your index.md file. See configuration above.
 
+To make new blog posts add source files to posts folder.
+
+Run `./tundra.sh -h` to see available options.
+
+Todo: custom themes, custom page layout.
+
+## Roadmap
+**v0.3**
+- standalone pages
+- custom css for index/standalone pages
+- navigation
+
+**v0.4**
+- multiple i/o formats support
+- publications
+- tidy up basic css
+  
+**v0.5**
+- output to docs folder option(for gh pages)
+- tidy up bootstrap css
+
+**v0.6**
+- fancy css (spectre?)
+- documentation
+- tags support
+  
 ## License
 Public domain.
