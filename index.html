@@ -64,15 +64,13 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
         </div>
       </div>
             <div class="span9">
-            <h1 align="center">tundra.sh - v0.1</h1>
+            <h1 align="center">tundra.sh - v0.2</h1>
 <div align="center">
   <strong>static website, blog and documentation generator</strong>
 </div>
 <div align="center">
   <code>tundra.sh</code> is written in shell and depends only on pandoc
-</div>
 <!-- showcase -->
-<center>
   <table>
     <tr>
       <td><a href="https://frainfreeze.github.io/tundra/">
@@ -85,36 +83,34 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
             <img width="120" alt="fancy theme: post" src="https://i.imgur.com/W87VktF.png"></a></td>
     </tr>
   </table>
-</center>
+</div>
 <p align="center">
   <a href="#features">Features</a> •
-  <a href="#how-to-use">Install</a> •
-  <a href="#download">Configure</a> •
-  <a href="#credits">Customize</a> •
-  <a href="#related">Roadmap</a> •
+  <a href="#install">Install</a> •
+  <a href="#configure">Configure</a> •
+  <a href="#customize">Customize</a> •
+  <a href="#roadmap">Roadmap</a> •
   <a href="#license">License</a>
 </p>
 <h2 id="features">Features</h2>
 <ul>
-<li>minimal dependencies: just the <code>pandoc</code> on POSIX systems</li>
-<li>generates light static pages</li>
-<li>blog friendly</li>
+<li>single shell script</li>
+<li>fast and simple to setup and configuration</li>
+<li>minimal dependencies: just the <code>pandoc</code> on unix-like systems</li>
+<li>generates static content: easy to host anywhere</li>
 <li>syntax highlighting for over 100 languages, out of the box</li>
+<li>support for more than 20 types of source files</li>
+<li>blog friendly</li>
 </ul>
 <h2 id="install">Install</h2>
 <p>Built and tested on Debian 9. To get the demo page up:</p>
 <ul>
-<li><code>sudo apt install pandoc</code></li>
-<li><code>git clone https://github.com/frainfreeze/pandblog.git</code></li>
-<li><code>chmod a+rx ./tundra.sh</code></li>
-<li><code>./tundra.sh -b &amp;&amp; xdg-open index.html</code></li>
+<li>Install pandoc: <code>sudo apt install pandoc</code></li>
+<li>Download this repository: <code>git clone https://github.com/frainfreeze/pandblog.git</code></li>
+<li>Make script executable: <code>chmod a+rx ./tundra.sh</code></li>
+<li>Run the script and open output in browser: <code>./tundra.sh -b &amp;&amp; xdg-open index.html</code></li>
 </ul>
-<p>To change index page simply edit this readme or configure <code>tundra.sh</code><br />
-to point at your index.md file. See configuration bellow.</p>
-<p>To make new blog posts add source files to posts folder.</p>
-<p>Run <code>./tundra.sh -h</code> to see available options.</p>
 <h2 id="configure">Configure</h2>
-<h2 id="customize">Customize</h2>
 <p>There are two types of configuration: per project and per page.<br />
 Per project: on top of <code>tundra.sh</code> are configuration variables.<br />
 You can use them to change page theme, markdown flavor etc.</p>
@@ -128,25 +124,35 @@ You can use them to change page theme, markdown flavor etc.</p>
 <span class="ot">---</span></code></pre></div>
 <p>I recommend you to keep the block on the top of the file.<br />
 See <a href="https://pandoc.org/MANUAL.html#extension-yaml_metadata_block">pandoc documentation</a> for more details.</p>
+<h2 id="customize">Customize</h2>
+<p>To change index page simply edit this readme or configure <code>tundra.sh</code><br />
+to point at your index.md file. See configuration above.</p>
+<p>To make new blog posts add source files to posts folder.</p>
+<p>Run <code>./tundra.sh -h</code> to see available options.</p>
+<p>Todo: custom themes, custom page layout.</p>
 <h2 id="roadmap">Roadmap</h2>
+<p><strong>v0.3</strong></p>
 <ul>
-<li>index and about page</li>
-<li>make switches actually work, sigh</li>
-<li>build <del>index and</del> about page independently</li>
-<li>custom css for index and about page</li>
+<li>standalone pages</li>
+<li>custom css for index/standalone pages</li>
 <li>navigation</li>
-<li>tags</li>
-<li><del>documentation</del></li>
-<li><del>demo page</del></li>
-<li><del>fancy css template</del></li>
-<li>docs folder option</li>
-<li>publications
+</ul>
+<p><strong>v0.4</strong></p>
 <ul>
-<li>tex</li>
-<li>pdf</li>
-</ul></li>
+<li>multiple i/o formats support</li>
+<li>publications</li>
 <li>tidy up basic css</li>
-<li>tidy up fancy css</li>
+</ul>
+<p><strong>v0.5</strong></p>
+<ul>
+<li>output to docs folder option(for gh pages)</li>
+<li>tidy up bootstrap css</li>
+</ul>
+<p><strong>v0.6</strong></p>
+<ul>
+<li>fancy css (spectre?)</li>
+<li>documentation</li>
+<li>tags support</li>
 </ul>
 <h2 id="license">License</h2>
 <p>Public domain.</p>
