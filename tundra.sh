@@ -61,8 +61,8 @@ gen_archive(){
         cat $tmp_path/res/basic/js.Thtml >> index.html
         echo '<link rel="stylesheet" href="../res/basic/style.css"></head>' >> index.html
         echo "<h1>Blog archive</h1>" >> index.html
-        echo "<input type=\"button\" id=\"test\" value=\"sort by date\"/>" >> index.html
-        echo "<input type=\"button\" id=\"test1\" value=\"sort by title\"/>" >> index.html
+        echo "<input class=\"button-shadow\" type=\"button\" id=\"test\" value=\"sort by date\"/>" >> index.html
+        echo "<input class=\"button-shadow\" type=\"button\" id=\"test1\" value=\"sort by title\"/>" >> index.html
         echo "<ul id=\"list\">" >> index.html
         for url in *.html; do
             if [ "$url" != "index.html" ]

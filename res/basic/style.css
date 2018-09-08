@@ -27,6 +27,7 @@ a:visited {
 
 a:hover {
   color: #06e;
+  text-decoration: underline;
 }
 
 a:active {
@@ -321,6 +322,23 @@ table td {
   h2, h3 {
     page-break-after: avoid;
   }
+}
+
+.button, .button-shadow {
+  border: 1px solid #ccc !important;
+  background-color: #fcfcfc;
+  border-radius: 5px;
+  color: black;
+  padding: 5px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.button-shadow:hover, .button-blue-shadow:hover{
+  box-shadow: 0 0 6px rgba(35, 173, 278, 1);
 }
 
 .doc-title { float: left; display: block; padding: 10px 20px 10px; margin-left: -20px;
