@@ -2,6 +2,9 @@
 # tundra.sh v0.2
 
 ########## Configuration ###########
+AUTHOR="frainfreeze"
+BLOG_TITLE="frainfreeze's technical blog"
+
 #            features
 # If index is false and blog is true a default index 
 # will be generated in form of blog archive page. Index
@@ -56,11 +59,8 @@ gen_archive(){
         echo "\tGenerating index in archive format... todo."
     else
         cd $POSTS_PATH
-        
-        echo "<head><title>Blog archive</title>" > index.html
-        cat $tmp_path/res/basic/js.Thtml >> index.html
-        echo '<link rel="stylesheet" href="../res/basic/style.css"></head>' >> index.html
-        echo "<h1>Blog archive</h1>" >> index.html
+
+        cat $tmp_path/res/basic/blog-index.Thtml > index.html
         echo "<input class=\"button-shadow\" type=\"button\" id=\"test\" value=\"sort by date\"/>" >> index.html
         echo "<input class=\"button-shadow\" type=\"button\" id=\"test1\" value=\"sort by title\"/>" >> index.html
         echo "<ul id=\"list\">" >> index.html
@@ -72,7 +72,8 @@ gen_archive(){
                 echo "<li><span class=\"date\">$date</span> - <a href=\"$url\"><span class="post-title">$title</span></a></li>" >> index.html
             fi
         done
-        echo "</ul>" >> index.html
+        echo "</ul></body></html>" >> index.html
+        sed -i "s/blog-title/$BLOG_TITLE/g" index.html
 
         cd $tmp_path
     fi

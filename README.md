@@ -89,26 +89,35 @@ Todo: custom themes, custom page layout.
 
 ## Roadmap
 **v0.3**
-- standalone pages
-- custom css for index/standalone pages
-- navigation
+- ~~standalone pages~~
+- ~~custom css for index/standalone pages~~
+- ~~navigation~~
+- automatic navbar generation
 
 **v0.4**
 - multiple i/o formats support
 - publications
+- fix toc in basic css
 - tidy up basic css
   
 **v0.5**
 - output to docs folder option(for gh pages)
+- update bootstrap to responsive version
 - tidy up bootstrap css
 
 **v0.6**
 - fancy css (spectre?)
-- documentation
-- tags support
+- tags/categories support
 
 **v0.7**
 - support for more than 20 types of source files
-  
+- documentation
+- publications
+
+**v0.8**
+- better configuration
+- easier themeing
+- simple custom arch
+
 ## License
 Public domain.
