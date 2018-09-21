@@ -20,7 +20,7 @@ PAGES=true
 # $PAGES contains names of files that will be built into
 # standalone pages and linked into navbar
 INDEX_PATH=README.md
-INDEX_RES=`pwd`/res/basic
+INDEX_RES=res/basic
 
 POSTS_PATH=posts
 POSTS_RES=`pwd`/res/basic
