@@ -94,7 +94,7 @@ Standard link =  http://ghost.org
 
 ---
 
-![Image](https://dl.dropboxusercontent.com/u/41297054/Pic.jpeg)
+![Image](https://frainfreeze.github.io/plant.png)
 
 ---
 

@@ -1,4 +1,4 @@
-<h1 align="center">tundra.sh - v0.3</h1>
+<h1 align="center">tundra.sh - v0.4</h1>
 <div align="center">
   <strong>static website, blog and documentation generator</strong>
 </div>
@@ -8,8 +8,8 @@
 </div>
 
 <p align="center">
-  <a href="https://frainfreeze.github.io/tundra/">Demo</a> •
   <a href="#features">Features</a> •
+  <a href="#demos">Demos</a> •
   <a href="#install">Install</a> •
   <a href="#themes">Themes</a> •
   <a href="#configure">Configure</a> •
@@ -24,6 +24,9 @@
 - generates static content: easy to host anywhere
 - syntax highlighting for over 100 languages, out of the box
 - blog friendly
+
+## Demos
+[This readme](index.html) | ["Handbook" template](PREVIEW.html) | [Blog index](posts/index.html) | [Blog post](posts/post0.html)
 
 ## Install
 Built and tested on Debian 9. To get the demo page up:
@@ -90,22 +93,20 @@ Todo: custom themes, custom page layout.
 ## Roadmap
 **v1.0**
 - automatic navbar generation
-- multiple i/o formats support
-- fix toc in basic css
-- tidy up basic css
-- handbook css and template
+- update this readme
+- tidy up bootstrap css
 
 **v2.0**
 - output to docs folder option(for gh pages)
 - update bootstrap to responsive version
-- tidy up bootstrap css
-- themes
-- tags/categories support
-
-**v3.0**
 - better configuration
 - easier themeing
 - simple custom arch
+
+**v3.0**
+- themes
+- tags/categories support
+- multiple i/o formats support
 
 ## License
 Public domain.

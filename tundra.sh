@@ -26,8 +26,8 @@ POSTS_PATH=posts
 POSTS_RES=`pwd`/res/basic
 
 PAGES_PATH=`pwd`
-PAGES_LIST="about.md books.md"
 PAGES_RES=`pwd`/res/basic
+PAGES_LIST="PREVIEW.md"
 
 #               misc
 # MD_FLAVOUR tells pandoc what markdown flavour to use,
@@ -111,7 +111,7 @@ build_sources() {
         echo "\tBuilding pages"
         for page in $PAGES_LIST
         do
-            pandoc -f $MD_FLAVOUR $page -o "${page%.*}.html" --template=$INDEX_RES/handbook.Thtml
+            pandoc $page -o "${page%.*}.html" --template=$INDEX_RES/handbook.Thtml
         done
     fi
 
