@@ -1,4 +1,4 @@
-<h1 align="center">tundra.sh - v0.2</h1>
+<h1 align="center">tundra.sh - v0.3</h1>
 <div align="center">
   <strong>static website, blog and documentation generator</strong>
 </div>
@@ -8,13 +8,13 @@
 </div>
 
 <p align="center">
+  <a href="https://frainfreeze.github.io/tundra/">Demo</a> •
   <a href="#features">Features</a> •
   <a href="#install">Install</a> •
   <a href="#themes">Themes</a> •
   <a href="#configure">Configure</a> •
   <a href="#customize">Customize</a> •
-  <a href="#roadmap">Roadmap</a> •
-  <a href="#license">License</a>
+  <a href="#roadmap">Roadmap</a>
 </p>
 
 ## Features
@@ -27,8 +27,8 @@
 
 ## Install
 Built and tested on Debian 9. To get the demo page up:
-- Install pandoc: `sudo apt install pandoc`
-- Download this repository: `git clone https://github.com/frainfreeze/pandblog.git`
+- Install pandoc (>v2.0), make sure you have shell and common UNIX utilities
+- Download this repository: `git clone https://github.com/frainfreeze/tundra.git`
 - Make script executable: `chmod a+rx ./tundra.sh`
 - Run the script and open output in browser: `./tundra.sh -b && xdg-open index.html`
 
@@ -88,33 +88,21 @@ Run `./tundra.sh -h` to see available options.
 Todo: custom themes, custom page layout.
 
 ## Roadmap
-**v0.3**
-- ~~standalone pages~~
-- ~~custom css for index/standalone pages~~
-- ~~navigation~~
+**v1.0**
 - automatic navbar generation
-
-**v0.4**
 - multiple i/o formats support
-- publications
 - fix toc in basic css
 - tidy up basic css
-  
-**v0.5**
+- handbook css and template
+
+**v2.0**
 - output to docs folder option(for gh pages)
 - update bootstrap to responsive version
 - tidy up bootstrap css
-
-**v0.6**
-- fancy css (spectre?)
+- themes
 - tags/categories support
 
-**v0.7**
-- support for more than 20 types of source files
-- documentation
-- publications
-
-**v0.8**
+**v3.0**
 - better configuration
 - easier themeing
 - simple custom arch

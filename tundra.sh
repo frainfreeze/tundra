@@ -12,7 +12,6 @@ BLOG_TITLE="frainfreeze's technical blog"
 # documents, about and other standalone pages.
 INDEX=true
 BLOG=true
-DOCS=true
 PAGES=true
 
 #              paths
@@ -21,17 +20,14 @@ PAGES=true
 # $PAGES contains names of files that will be built into
 # standalone pages and linked into navbar
 INDEX_PATH=README.md
-INDEX_RES=res/basic
+INDEX_RES=`pwd`/res/basic
 
 POSTS_PATH=posts
-POSTS_RES=../res/bootstrap
-
-DOCS_PATH=docs
-DOCS_RES=res/bootstrap
+POSTS_RES=`pwd`/res/basic
 
 PAGES_PATH=`pwd`
 PAGES_LIST="about.md books.md"
-PAGES_RES=../res/basic
+PAGES_RES=`pwd`/res/basic
 
 #               misc
 # MD_FLAVOUR tells pandoc what markdown flavour to use,
@@ -83,7 +79,7 @@ gen_blog(){
     tmp_path=`pwd` # someone is bound to nest posts in subfolder and break this.
     cd $POSTS_PATH
     for f in *.md; do 
-        pandoc -f $MD_FLAVOUR "$f" -s -o "${f%.*}.html" --template $POSTS_RES/blog.Thtml --css $POSTS_RES/style.css --toc --toc-depth 3; 
+        pandoc -f $MD_FLAVOUR "$f" -s -o "${f%.*}.html" --template=$POSTS_RES/blog-post.Thtml --toc --toc-depth 3; 
     done
     cd $tmp_path
 
@@ -99,7 +95,7 @@ build_sources() {
     if [ "$INDEX" = true ] 
     then
         echo "\tBuilding index"
-        pandoc -f $MD_FLAVOUR $INDEX_PATH -o "index.html" --template $INDEX_RES/index.Thtml --css $INDEX_RES/style.css #--toc
+        pandoc -f $MD_FLAVOUR $INDEX_PATH -o "index.html" --template=$INDEX_RES/simple.Thtml --css $INDEX_RES/style.css #--toc
     fi
 
     # build blog
@@ -115,7 +111,7 @@ build_sources() {
         echo "\tBuilding pages"
         for page in $PAGES_LIST
         do
-            pandoc -f $MD_FLAVOUR $page -o "${page%.*}.html" --template $INDEX_RES/index.Thtml --css $INDEX_RES/style.css
+            pandoc -f $MD_FLAVOUR $page -o "${page%.*}.html" --template=$INDEX_RES/handbook.Thtml
         done
     fi
 
@@ -157,4 +153,4 @@ done
 
 ##### other
 # pandoc index.md -s | lynx -stdin
-# find * -name "*.md" -type f -exec sh -c 'pandoc "${0}" -o "${0%.md}.html" --template res/basic.Thtml --css res/basic.css --self-contained --toc --toc-depth 3' {} \;
+# find * -name "*.md" -type f -exec sh -c 'pandoc "${0}" -o "${0%.md}.html" --template=res/basic.Thtml --css res/basic.css --self-contained --toc --toc-depth 3' {} \;
