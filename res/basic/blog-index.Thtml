@@ -168,10 +168,9 @@ window.onload = function() {
   <input type="checkbox" id="nav-check">
   <div class="nav-links">
     <a href="../index.html">&larr; Home</a>
-    <a href="">Blog</a>
     <a href="../books.html">Books</a>
-    <a href="../about.html">About</a>
+    <a href="../about.html">About me</a>
   </div>
 </div>
 <!-- #navbar -->
-  <h1>Blog archive</h1>
+  <h1>Archive</h1>

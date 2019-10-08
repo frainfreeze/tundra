@@ -30,23 +30,6 @@ $for(header-includes)$
 $endfor$
 </head>
 <body>
-  $if(title)$
-  <div class="navbar navbar-static-top">
-    <div class="navbar-inner">
-      <div class="container">
-        <span class="doc-title">$title$</span>
-        <ul class="nav pull-right doc-info">
-          $for(author)$
-          <li><p class="navbar-text">$author$</p></li>
-          $endfor$
-          $if(date)$
-          <li><p class="navbar-text">$date$</p></li>
-          $endif$
-        </ul>
-      </div>
-    </div>
-  </div>
-  $endif$
   <div class="container">
     <div class="row">
       $if(toc)$
