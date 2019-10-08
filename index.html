@@ -3,23 +3,130 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta http-equiv="Content-Style-Type" content="text/css" />
   <meta name="generator" content="pandoc" />
-  <title>Tomislav Kucar</title>
+  <title>README</title>
   <style type="text/css">code{white-space: pre;}</style>
+  <style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
   <link rel="stylesheet" href="res/basic/style.css" />
 </head>
 <body>
   <div class="container">
     <div class="row">
             <div class="span12">
-            <h1 align="center">Tomislav Kucar</h1>
+            <h1 align="center">tundra.sh - v0.5</h1>
 <div align="center">
-  <a href="https://frainfreeze.github.io"><img alt="mock-up" src="pages/img/bg.jpg"></a>
-  <p>
-  <a href="./pages/about.html">About me</a> •
-  <a href="./posts/index.html">Writing</a> •
-  <a href="./pages/books.html">Reading</a>
-  </p>
+  <strong>Static pages generator.</strong>
 </div>
+<div align="center">
+  <code>tundra.sh</code> is written in shell and depends only on pandoc
+  <img alt="mock-up" src="https://imgur.com/aaBW5Ggl.png">
+</div>
+<h2>Features</h2>
+<ul>
+<li>single shell script</li>
+<li>fast and simple to setup and configure</li>
+<li>minimal dependencies: just the <code>pandoc</code> on unix-like systems</li>
+<li>generates static content: easy to host anywhere</li>
+<li>syntax highlighting for over 100 languages, out of the box</li>
+<li>blog friendly</li>
+</ul>
+<h2>Demos</h2>
+<p><a href="https://frainfreeze.github.io/tundra/">This readme</a> | <a href="https://frainfreeze.github.io/tundra/posts/index.html">Blog index</a> | <a href="https://frainfreeze.github.io/tundra/posts/post0.html">Blog post</a> | <a href="https://frainfreeze.github.io/tundra/pages/bookshelf.html">Static page</a></p>
+<h2>Install</h2>
+<p>Built and tested on Debian 9. To get the demo page up:</p>
+<ul>
+<li>Install pandoc (&gt;v2.0), make sure you have shell and common UNIX utilities</li>
+<li>Download this repository: <code>git clone https://github.com/frainfreeze/tundra.git</code></li>
+<li>Make script executable: <code>chmod a+rx ./tundra.sh</code></li>
+<li>Run the script and open output in browser: <code>./tundra.sh -b &amp;&amp; xdg-open index.html</code></li>
+</ul>
+<h2>Configure</h2>
+<p>There are two types of configuration: per project and per page. Per project: on top of <code>tundra.sh</code> are configuration variables. You can use them to change page theme, markdown flavor etc.</p>
+<p>Per page: <code>pandoc</code> supports YAML blocks, this is self-explanatory example:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode yaml"><code class="sourceCode yaml"><a class="sourceLine" id="cb1-1" title="1"><span class="ot">---</span></a>
+<a class="sourceLine" id="cb1-2" title="2"><span class="fu">title:</span><span class="at"> </span><span class="st">&quot;Example title&quot;</span></a>
+<a class="sourceLine" id="cb1-3" title="3"><span class="fu">author:</span><span class="at"> </span><span class="st">&quot;author&quot;</span></a>
+<a class="sourceLine" id="cb1-4" title="4"><span class="fu">date:</span><span class="at"> 2000-01-21</span></a>
+<a class="sourceLine" id="cb1-5" title="5"><span class="fu">tags:</span><span class="at"> </span><span class="kw">[</span><span class="st">&quot;tag1&quot;</span><span class="kw">,</span><span class="st">&quot;tag2&quot;</span><span class="kw">]</span></a>
+<a class="sourceLine" id="cb1-6" title="6"><span class="fu">toc:</span><span class="at"> </span><span class="ch">false</span></a>
+<a class="sourceLine" id="cb1-7" title="7"><span class="ot">---</span></a></code></pre></div>
+<p>I recommend you to keep the block on the top of the file. See <a href="https://pandoc.org/MANUAL.html#extension-yaml_metadata_block">pandoc documentation</a> for more details.</p>
+<h2>Customize</h2>
+<p>To change index page simply edit this readme or configure <code>tundra.sh</code> to point at your index.md file. See configuration above.</p>
+<p>To make new blog posts add source files to posts folder.</p>
+<p>Run <code>./tundra.sh -h</code> to see available options.</p>
+<p>Todo: custom themes, custom page layout.</p>
+<h2>Roadmap</h2>
+<ul>
+<li>output to docs folder option(for gh pages)</li>
+<li>update bootstrap to responsive version</li>
+<li>better configuration</li>
+<li>easier themeing</li>
+<li>multiple i/o formats support</li>
+</ul>
+<h2>License</h2>
+<p>Public domain.</p>
             </div>
     </div>
   </div>
