@@ -3,7 +3,7 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta http-equiv="Content-Style-Type" content="text/css" />
   <meta name="generator" content="pandoc" />
-  <title>README</title>
+  <title>rundra/sh - static pages generator</title>
   <style type="text/css">code{white-space: pre;}</style>
   <style type="text/css">
 a.sourceLine { display: inline-block; line-height: 1.25; }
@@ -84,6 +84,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <h2>Features</h2>
 <ul>
+<li>markdown sources*</li>
 <li>single shell script</li>
 <li>fast and simple to setup and configure</li>
 <li>minimal dependencies: just the <code>pandoc</code> on unix-like systems</li>
@@ -108,9 +109,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <a class="sourceLine" id="cb1-2" title="2"><span class="fu">title:</span><span class="at"> </span><span class="st">&quot;Example title&quot;</span></a>
 <a class="sourceLine" id="cb1-3" title="3"><span class="fu">author:</span><span class="at"> </span><span class="st">&quot;author&quot;</span></a>
 <a class="sourceLine" id="cb1-4" title="4"><span class="fu">date:</span><span class="at"> 2000-01-21</span></a>
-<a class="sourceLine" id="cb1-5" title="5"><span class="fu">tags:</span><span class="at"> </span><span class="kw">[</span><span class="st">&quot;tag1&quot;</span><span class="kw">,</span><span class="st">&quot;tag2&quot;</span><span class="kw">]</span></a>
-<a class="sourceLine" id="cb1-6" title="6"><span class="fu">toc:</span><span class="at"> </span><span class="ch">false</span></a>
-<a class="sourceLine" id="cb1-7" title="7"><span class="ot">---</span></a></code></pre></div>
+<a class="sourceLine" id="cb1-5" title="5"><span class="ot">---</span></a></code></pre></div>
 <p>I recommend you to keep the block on the top of the file. See <a href="https://pandoc.org/MANUAL.html#extension-yaml_metadata_block">pandoc documentation</a> for more details.</p>
 <h2>Customize</h2>
 <p>To change index page simply edit this readme or configure <code>tundra.sh</code> to point at your index.md file. See configuration above.</p>
@@ -119,11 +118,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Todo: custom themes, custom page layout.</p>
 <h2>Roadmap</h2>
 <ul>
+<li>multiple i/o formats support out od the box (*atm only by editing the pandoc calls)</li>
 <li>output to docs folder option(for gh pages)</li>
-<li>update bootstrap to responsive version</li>
+<li>new themes</li>
 <li>better configuration</li>
-<li>easier themeing</li>
-<li>multiple i/o formats support</li>
 </ul>
 <h2>License</h2>
 <p>Public domain.</p>

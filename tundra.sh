@@ -5,22 +5,16 @@
 AUTHOR="frainfreeze"
 BLOG_TITLE="frainfreeze's example blog for tundra.sh"
 
-#              paths (edit me!)
-# $_PATH points to folder with $ source files
-# $_RES points to theme in res folder for $
-# $PAGES contains names of files that will be built into
-# standalone pages and linked into navbar
 ROOT=`pwd`
 INDEX_PATH=README.md
 INDEX_RES=res/basic
 
 POSTS_PATH=posts
-POSTS_RES=../res/bootstrap
+POSTS_RES=../res/basic
 
 PAGES_PATH=pages
 PAGES_RES=../res/basic
 
-#               misc
 # MD_FLAVOUR tells pandoc what markdown flavour to use,
 # +yaml_met... turns on yaml meta data option in pandoc
 MD_FLAVOUR="markdown_github+yaml_metadata_block"
@@ -67,7 +61,7 @@ build_sources() {
     if [ ! -z ${INDEX_PATH+x} ]; 
     then
         echo "\tBuilding index"
-        pandoc -f $MD_FLAVOUR $INDEX_PATH -o "index.html" --template $INDEX_RES/index.Thtml --css=$INDEX_RES/style.css -s #--toc
+        pandoc -f $MD_FLAVOUR $INDEX_PATH -o "index.html" --template $INDEX_RES/index.Thtml --css=$INDEX_RES/style.css
     fi
 
     # build blog
@@ -78,7 +72,7 @@ build_sources() {
         cd $POSTS_PATH
         
         for f in *.md; do 
-            pandoc -f $MD_FLAVOUR "$f" -s -o "${f%.*}.html" --template $POSTS_RES/blog.Thtml --css=$POSTS_RES/style.css --toc --toc-depth 3 -s 
+            pandoc -f $MD_FLAVOUR "$f" -s -o "${f%.*}.html" --template $POSTS_RES/blog.Thtml --css=$POSTS_RES/style.css
         done
         
         cd $ROOT
@@ -92,7 +86,7 @@ build_sources() {
         cd $PAGES_PATH
         for page in *.md;
         do
-            pandoc -f $MD_FLAVOUR $page -o "${page%.*}.html" --template $PAGES_RES/index.Thtml --css=$PAGES_RES/style.css -s
+            pandoc -f $MD_FLAVOUR $page -o "${page%.*}.html" --template $PAGES_RES/index.Thtml --css=$PAGES_RES/style.css
         done
         cd $ROOT
     fi

@@ -1,3 +1,7 @@
+---
+title: "rundra/sh - static pages generator"
+---
+
 <h1 align="center">tundra.sh - v0.5</h1>
 <div align="center">
   <strong>Static pages generator.</strong>
@@ -8,6 +12,7 @@
 </div>
 
 ## Features
+- markdown sources*
 - single shell script
 - fast and simple to setup and configure
 - minimal dependencies: just the `pandoc` on unix-like systems
@@ -37,8 +42,6 @@ Per page: `pandoc` supports YAML blocks, this is self-explanatory example:
 title: "Example title"
 author: "author"
 date: 2000-01-21
-tags: ["tag1","tag2"]
-toc: false
 ---
 ```
 
@@ -56,11 +59,10 @@ Run `./tundra.sh -h` to see available options.
 Todo: custom themes, custom page layout.
 
 ## Roadmap
+- multiple i/o formats support out od the box (*atm only by editing the pandoc calls)
 - output to docs folder option(for gh pages)
-- update bootstrap to responsive version
+- new themes
 - better configuration
-- easier themeing
-- multiple i/o formats support
 
 ## License
 Public domain.

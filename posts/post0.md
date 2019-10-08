@@ -1,8 +1,6 @@
 ---
 title: "Markdown cheatsheet"
 date: 2018-09-18
-tags: ["Test", "Software-engineering"]
-author: "Tomislav (frainfreeze) Kucar"
 ---
 
 # Heading 1
@@ -89,12 +87,13 @@ document.write(today);
 
 ---
 
-Standard link =  http://ghost.org	
-[Custom Text Link](http://ghost.org)
+Standard link =  http://example.com
+
+[Custom Text Link](hhttp://example.com)
 
 ---
 
-![Image](https://frainfreeze.github.io/plant.png)
+![Image](https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png)
 
 ---
 
