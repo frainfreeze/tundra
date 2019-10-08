@@ -1,5 +1,5 @@
 ---
-title: "rundra/sh - static pages generator"
+title: "tundra.sh - static pages generator"
 ---
 
 <h1 align="center">tundra.sh - v0.5</h1>
