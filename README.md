@@ -4,7 +4,7 @@
 </div>
 <div align="center">
   <code>tundra.sh</code> is written in shell and depends only on pandoc
-  <img alt="mock-up" src="https://imgur.com/aaBW5Ggl.png">
+  <img alt="mock-up" src="https://i.imgur.com/uxQfPeE.png">
 </div>
 
 ## Features
