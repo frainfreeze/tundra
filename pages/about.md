@@ -117,6 +117,6 @@ responsibility, professionalism, teamwork, positive attitude, integrity, flexibi
 + [Kriptovalute – novac budućnosti](https://cdn.rawgit.com/frainfreeze/studying/7acbe0e9/university/papers/tkucar-Kriptovalute-novac_buducnosti.pdf)
 + [Analiza komunikacije između dva računala korištenjem Wireshark aplikacije](https://cdn.rawgit.com/frainfreeze/studying/7acbe0e9/university/10005-ComputerNetworks/tkucar-Analiza_komunikacije_izmedu_dva_racunala_koristenjem_Wiresharka.pdf)
 
-See [more](./posts/index.html).
+See [more](../posts/index.html).
 
 <div align="center"><img alt="plant drawing" src="img/plant.jpg"></div>

@@ -1,7 +1,7 @@
 ---
 title: "Markdown cheatsheet"
 date: 2018-09-18
-tags: ["Test", "Software-engineering", "Hypnotoads"]
+tags: ["Test", "Software-engineering"]
 author: "Tomislav (frainfreeze) Kucar"
 ---
 

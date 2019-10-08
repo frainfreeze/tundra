@@ -4,7 +4,7 @@ toc: false
 ---
 
 ## Hello, Recruiter!
-If you've reached this page, chances are you're looking to contact me about a position, possibly coming from my [LinkedIn](https://www.linkedin.com/in/frainfreeze) profile or my [resume](https://frainfreeze.github.io/about.html). Good! Let me help you and save us both some time:
+If you've reached this page, chances are you're looking to contact me about a position, possibly coming from my [LinkedIn](https://www.linkedin.com/in/frainfreeze) profile or my [resume](https://frainfreeze.github.io/pages/about.html). Good! Let me help you and save us both some time:
 
 I'm not a one-trick pony. I have an extensive background in software engineering with focus on the intersection of security and large scale operations. I'm well versed in system administration and operations. Furthermore I have great interest in management and business activities (finance, marketing, research and development).
 

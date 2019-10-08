@@ -32,7 +32,7 @@ Read a good book 10 times rather than 10 bad books.
 
 Tags: Autobiography, Ethics & Morality, Philosophy, Productivity, Psychology, Self-help, Health, Science Software, Stoicism, Time management, Decision making, Problem solving
 
-Check out my [bookshelf](bookshelf.html) or go to [home page](index.html).
+Check out my [bookshelf](bookshelf.html) or go to [home page](../index.html).
 
 <br>
 
@@ -269,6 +269,7 @@ of that now shorter life will be significantly worse.
   the science. 
 - Independent research: A lack of sleep costs nations about 2% of their GDP (Gross Domestic Product)
 
+----
 
 # The Clean Coder
 ```

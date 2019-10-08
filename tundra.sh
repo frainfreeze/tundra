@@ -17,9 +17,6 @@ INDEX_RES=res/basic
 POSTS_PATH=posts
 POSTS_RES=../res/bootstrap
 
-DOCS_PATH=docs
-DOCS_RES=../res/bootstrap
-
 PAGES_PATH=pages
 PAGES_RES=../res/basic
 
@@ -100,18 +97,6 @@ build_sources() {
         cd $ROOT
     fi
 
-    # build docs
-    if [ ! -z ${DOCS_PATH+x} ]; 
-    then
-        echo "\tBuilding docs"
-        cd $DOCS_PATH
-        for page in *.md;
-        do
-            pandoc -f $MD_FLAVOUR $page -o "${page%.*}.html" --template $DOCS_RES/index.Thtml --css=$DOCS_RES/style.css -s
-        done
-        cd $ROOT
-    fi
-
     END_TIME=$(($(date +%s) - $START_TIME))
     echo "Sources built in $(($END_TIME/60)) min $(($END_TIME%60)) sec" 
 }
@@ -147,7 +132,3 @@ while [ "$1" != "" ]; do
     esac
     shift
 done
-
-##### notes
-# pandoc index.md -s | lynx -stdin
-# find * -name "*.md" -type f -exec sh -c 'pandoc "${0}" -o "${0%.md}.html" --template res/basic.Thtml --css res/basic.css --self-contained --toc --toc-depth 3' {} \;

@@ -7,8 +7,8 @@ toc: false
 <div align="center">
   <a href="https://frainfreeze.github.io"><img alt="mock-up" src="pages/img/bg.jpg"></a>
   <p>
-  <a href="about.html">About me</a> •
+  <a href="./pages/about.html">About me</a> •
   <a href="./posts/index.html">Writing</a> •
-  <a href="books.html">Reading</a>
+  <a href="./pages/books.html">Reading</a>
   </p>
 </div>
