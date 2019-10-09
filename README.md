@@ -59,8 +59,8 @@ Run `./tundra.sh -h` to see available options.
 Todo: custom themes, custom page layout.
 
 ## Roadmap
-- multiple i/o formats support out od the box (*atm only by editing the pandoc calls)
-- output to docs folder option(for gh pages)
+- multiple i/o formats support out of the box (*atm only by editing the pandoc calls)
+- output to docs folder option (for gh pages)
 - new themes
 - better configuration
 
