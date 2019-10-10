@@ -30,6 +30,8 @@ Built and tested on Debian 9. To get the demo page up:
 - Make script executable: `chmod a+rx ./tundra.sh`
 - Run the script and open output in browser: `./tundra.sh -b && xdg-open index.html`
 
+> NOTE: If you want to use this script on *BSD or macOS, please make sure you have the GNU implementation of `awk` and `sed` installed.
+
 ## Configure
 There are two types of configuration: per project and per page.
 Per project: on top of `tundra.sh` are configuration variables.
