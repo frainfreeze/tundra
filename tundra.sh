@@ -21,6 +21,10 @@ MD_FLAVOUR="markdown_github+yaml_metadata_block"
 
 
 ######### Implementation ##########
+
+AWK=`which gawk || which awk`
+SED=`which gsed || which sed`
+
 usage() {
     echo "Static site generator using pandoc."
     echo "./tundra.sh"
@@ -41,14 +45,14 @@ gen_archive(){
     for url in *.html; do
         if [ "$url" != "index.html" ]
         then
-            title=`awk -vRS="</title>" '/<title>/{gsub(/.*<title>|\n+/,"");print;exit}' $url`
-            date=`awk -vRS="</p></li>" '/<li><p class="navbar-text date">/{gsub(/.*<li><p class="navbar-text date">|\n+/,"");print;exit}' $url`
+            title=`$AWK -vRS="</title>" '/<title>/{gsub(/.*<title>|\n+/,"");print;exit}' $url`
+            date=`$AWK -vRS="</p></li>" '/<li><p class="navbar-text date">/{gsub(/.*<li><p class="navbar-text date">|\n+/,"");print;exit}' $url`
             echo "<li><span class=\"date\">$date</span> - <a href=\"$url\"><span class="post-title">$title</span></a></li>" >> index.html
         fi
     done
 
     echo "</ul></body></html>" >> index.html
-    sed -i "s/blog-title/$BLOG_TITLE/g" index.html
+    $SED -i "s/blog-title/$BLOG_TITLE/g" index.html
 
     cd $ROOT
 }
@@ -102,8 +106,8 @@ then
 fi
 
 while [ "$1" != "" ]; do
-    PARAM=`echo $1 | awk -F= '{print $1}'`
-    VALUE=`echo $1 | awk -F= '{print $2}'`
+    PARAM=`echo $1 | $AWK -F= '{print $1}'`
+    VALUE=`echo $1 | $AWK -F= '{print $2}'`
     case $PARAM in
         -h | --help)
             usage
