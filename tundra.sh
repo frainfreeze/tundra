@@ -60,31 +60,31 @@ gen_archive(){
 build_sources() {
     echo "Building sources..."
     START_TIME=$(date +%s)
-    
+
     # build index
-    if [ ! -z ${INDEX_PATH+x} ]; 
+    if [ ! -z ${INDEX_PATH+x} ];
     then
         echo "\tBuilding index"
         pandoc -f $MD_FLAVOUR $INDEX_PATH -o "index.html" --template $INDEX_RES/index.Thtml --css=$INDEX_RES/style.css
     fi
 
     # build blog
-    if [ ! -z ${POSTS_PATH+x} ]; 
+    if [ ! -z ${POSTS_PATH+x} ];
     then
         echo "\tBuilding blog"
-        
+
         cd $POSTS_PATH
-        
-        for f in *.md; do 
+
+        for f in *.md; do
             pandoc -f $MD_FLAVOUR "$f" -s -o "${f%.*}.html" --template $POSTS_RES/blog.Thtml --css=$POSTS_RES/style.css
         done
-        
+
         cd $ROOT
         gen_archive
     fi
 
     # build static pages
-    if [ ! -z ${PAGES_PATH+x} ]; 
+    if [ ! -z ${PAGES_PATH+x} ];
     then
         echo "\tBuilding static pages"
         cd $PAGES_PATH
@@ -96,13 +96,13 @@ build_sources() {
     fi
 
     END_TIME=$(($(date +%s) - $START_TIME))
-    echo "Sources built in $(($END_TIME/60)) min $(($END_TIME%60)) sec" 
+    echo "Sources built in $(($END_TIME/60)) min $(($END_TIME%60)) sec"
 }
 
-if [ -z "$1" ] 
+if [ -z "$1" ]
 then
-  usage
-  exit 1
+    usage
+    exit 1
 fi
 
 while [ "$1" != "" ]; do
