@@ -53,6 +53,7 @@ See [pandoc documentation](https://pandoc.org/MANUAL.html#extension-yaml_metadat
 ## Customize
 To change index page simply edit this readme or configure `tundra.sh` 
 to point at your index.md file. See configuration above.
+You can also use the `--index` option to give a file to be used (defaults to `README.md`).
 
 To make new blog posts add source files to posts folder.
 
