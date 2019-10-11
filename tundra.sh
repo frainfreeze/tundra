@@ -29,6 +29,7 @@ usage() {
     echo "Static site generator using pandoc."
     echo "./tundra.sh"
     echo "   -h --help \tDisplays this page."
+    echo "   -i --index \tIndex file, defaults to README.md."
     echo "   -b --build \tGenerates HTML from the sources."
     echo "   -c --clean \tDeletes HTML files"
     echo ""
@@ -112,6 +113,9 @@ while [ "$1" != "" ]; do
         -h | --help)
             usage
             exit 0
+            ;;
+        -i | --index)
+            INDEX_PATH=$VALUE
             ;;
         -b | --build)
             build_sources
