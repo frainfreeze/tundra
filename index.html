@@ -102,6 +102,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>Make script executable: <code>chmod a+rx ./tundra.sh</code></li>
 <li>Run the script and open output in browser: <code>./tundra.sh -b &amp;&amp; xdg-open index.html</code></li>
 </ul>
+<blockquote>
+<p>NOTE: If you want to use this script on *BSD or macOS, please make sure you have the GNU implementation of <code>awk</code> and <code>sed</code> installed.</p>
+</blockquote>
 <h2>Configure</h2>
 <p>There are two types of configuration: per project and per page. Per project: on top of <code>tundra.sh</code> are configuration variables. You can use them to change page theme, markdown flavor etc.</p>
 <p>Per page: <code>pandoc</code> supports YAML blocks, this is self-explanatory example:</p>
@@ -118,8 +121,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Todo: custom themes, custom page layout.</p>
 <h2>Roadmap</h2>
 <ul>
-<li>multiple i/o formats support out od the box (*atm only by editing the pandoc calls)</li>
-<li>output to docs folder option(for gh pages)</li>
+<li>multiple i/o formats support out of the box (*atm only by editing the pandoc calls)</li>
+<li>output to docs folder option (for gh pages)</li>
 <li>new themes</li>
 <li>better configuration</li>
 </ul>

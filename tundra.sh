@@ -9,6 +9,7 @@ ROOT=`pwd`
 INDEX_PATH=README.md
 INDEX_RES=res/basic
 
+#switch to semantic after fixing blog title and code highlighting
 POSTS_PATH=posts
 POSTS_RES=../res/basic
 

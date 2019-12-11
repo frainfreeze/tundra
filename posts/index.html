@@ -1,11 +1,10 @@
 <!DOCTYPE html>
+<html>
 <head>
+<meta charset="utf-8" />
 <title>Blog archive</title>
 <!-- archive sort -->
-<script type="text/javascript" src="//code.jquery.com/jquery-1.7.1.js"></script>
 <script type="text/javascript">
-$(function(){
-      
 function sortUnorderedList(ul, sortDescending, sortClass) {
   if (typeof ul == "string") {
     ul = document.getElementById(ul);
@@ -51,8 +50,6 @@ window.onload = function() {
     return false;
   }
 }
-
-});
 
 </script>
 <!-- #archive sort -->
@@ -171,7 +168,8 @@ window.onload = function() {
   </div>
 </div>
 <!-- #navbar -->
-  <h1>Archive</h1><input class="button-shadow" type="button" id="test" value="sort by date"/>
+  <h1>Archive</h1>
+<input class="button-shadow" type="button" id="test" value="sort by date"/>
 <input class="button-shadow" type="button" id="test1" value="sort by title"/>
 <ul id="list">
 <li><span class="date">2018-01-16</span> - <a href="bcpptgp.html"><span class=post-title>Beginning C++ Through Game Programming</span></a></li>

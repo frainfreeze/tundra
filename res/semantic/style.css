@@ -1,0 +1,12 @@
+.doc-title { float: left; display: block; padding: 10px 20px 10px; margin-left: -20px;
+    font-size: 20px; font-weight: 200; color: #777777; text-shadow: 0 1px 0 #ffffff; }
+  .doc-info .navbar-text { padding: 0 15px; }
+  .toc { margin-top: 10px; }
+  .toc, .toc ul { padding: 0; }
+  .toc ul { margin-left: 0; margin-bottom: 20px; list-style: none; }
+  .toc ul > li > a { display: block; }
+  .toc ul > li > a:hover,
+  .toc ul > li > a:focus { text-decoration: none; background-color: #eeeeee; }
+  .toc ul { margin-bottom: 0; padding-left: 5px;padding-right: 5px;}
+  .toc ul > li > a, .toc ul > li > a { padding: 3px 15px; }
+  .vjs-fullscreen {padding-top: 0px}
