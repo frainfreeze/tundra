@@ -28,7 +28,7 @@ usage() {
     echo "Static site generator using pandoc."
     echo "./tundra.sh"
     echo "   -h --help \tDisplays this page."
-    echo "   -i --index \tIndex file, defaults to README.md."
+    echo "   -i --index \tDefine custom index file and build."
     echo "   -b --build \tGenerates HTML from the sources."
     echo "   -c --clean \tDeletes HTML files"
     echo ""
@@ -108,15 +108,19 @@ then
 fi
 
 while [ "$1" != "" ]; do
-    PARAM=`echo $1 | $AWK -F= '{print $1}'`
-    VALUE=`echo $1 | $AWK -F= '{print $2}'`
-    case $PARAM in
+    case $1 in
         -h | --help)
             usage
             exit 0
             ;;
         -i | --index)
-            INDEX_PATH=$VALUE
+            if [ "$2" != "" ]; then
+                INDEX_PATH=$2
+                build_sources
+            else
+                echo "You must specify index file when using -i/--index!"
+            fi
+            exit 0
             ;;
         -b | --build)
             build_sources
@@ -128,7 +132,7 @@ while [ "$1" != "" ]; do
             exit 0
             ;;
         *)
-            echo "ERROR: unknown parameter \"$PARAM\""
+            echo "ERROR: unknown parameter \"$1\""
             usage
             exit 1
             ;;
