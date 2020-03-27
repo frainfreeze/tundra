@@ -37,7 +37,8 @@ function sortUnorderedList(ul, sortDescending, sortClass) {
 }
 
 window.onload = function() {
-  var desc = false;
+  var desc = true;
+  sortUnorderedList("list", desc, "date");
   document.getElementById("test").onclick = function() {
     sortUnorderedList("list", desc, "date");
     desc = !desc;
@@ -169,6 +170,7 @@ window.onload = function() {
 </div>
 <!-- #navbar -->
   <h1>Archive</h1>
+<h2>Blog archive</h2>
 <input class="button-shadow" type="button" id="test" value="sort by date"/>
 <input class="button-shadow" type="button" id="test1" value="sort by title"/>
 <ul id="list">

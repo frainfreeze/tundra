@@ -24,7 +24,7 @@ title: "tundra.sh - static pages generator"
 [This readme](https://frainfreeze.github.io/tundra/) | [Blog index](https://frainfreeze.github.io/tundra/posts/index.html) | [Blog post](https://frainfreeze.github.io/tundra/posts/post0.html) | [Static page](https://frainfreeze.github.io/tundra/pages/bookshelf.html)
 
 ## Install
-Built and tested on Debian 9. To get the demo page up:
+Built and tested on Debian 10. To get the demo page up:
 - Install pandoc (>v2.0), make sure you have shell and common UNIX utilities
 - Download this repository: `git clone https://github.com/frainfreeze/tundra.git`
 - Make script executable: `chmod a+rx ./tundra.sh`
@@ -43,7 +43,7 @@ Per page: `pandoc` supports YAML blocks, this is self-explanatory example:
 ---
 title: "Example title"
 author: "author"
-date: 2000-01-21
+date: 2020-01-21
 ---
 ```
 
