@@ -1,5 +1,5 @@
 ---
-title: "Programmer Competency Matrix extended"
+title: "Programmer Competency Matrix"
 date: 2018-02-21
 tags: ["Software-engineering"]
 toc: false

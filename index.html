@@ -68,19 +68,19 @@ code span.va { color: #19177c; } /* Variable */
 code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="res/basic/style.css" />
+  <link rel="stylesheet" href="res/style.css" />
 </head>
 <body>
   <div class="container">
     <div class="row">
             <div class="span12">
-            <h1 align="center">tundra.sh - v0.5</h1>
+            <h1 align="center">tundra.sh - v1.0</h1>
 <div align="center">
   <strong>Static pages generator.</strong>
 </div>
 <div align="center">
   <code>tundra.sh</code> is written in shell and depends only on pandoc
-  <img alt="mock-up" src="https://i.imgur.com/uxQfPeE.png">
+  <img alt="mock-up" src="mock.png">
 </div>
 <h2>Features</h2>
 <ul>
@@ -89,40 +89,35 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>fast and simple to setup and configure</li>
 <li>minimal dependencies: just the <code>pandoc</code> on unix-like systems</li>
 <li>generates static content: easy to host anywhere</li>
-<li>syntax highlighting for over 100 languages, out of the box</li>
+<li>syntax highlighting out of the box</li>
 <li>blog friendly</li>
 </ul>
 <h2>Demos</h2>
 <p><a href="https://frainfreeze.github.io/tundra/">This readme</a> | <a href="https://frainfreeze.github.io/tundra/posts/index.html">Blog index</a> | <a href="https://frainfreeze.github.io/tundra/posts/post0.html">Blog post</a> | <a href="https://frainfreeze.github.io/tundra/pages/bookshelf.html">Static page</a></p>
 <h2>Install</h2>
-<p>Built and tested on Debian 9. To get the demo page up:</p>
+<p>Built and tested on Debian 10. To get the demo page up:</p>
 <ul>
 <li>Install pandoc (&gt;v2.0), make sure you have shell and common UNIX utilities</li>
 <li>Download this repository: <code>git clone https://github.com/frainfreeze/tundra.git</code></li>
 <li>Make script executable: <code>chmod a+rx ./tundra.sh</code></li>
 <li>Run the script and open output in browser: <code>./tundra.sh -b &amp;&amp; xdg-open index.html</code></li>
 </ul>
+<blockquote>
+<p>NOTE: If you want to use this script on *BSD or macOS, please make sure you have the GNU implementation of <code>awk</code> and <code>sed</code> installed.</p>
+</blockquote>
 <h2>Configure</h2>
 <p>There are two types of configuration: per project and per page. Per project: on top of <code>tundra.sh</code> are configuration variables. You can use them to change page theme, markdown flavor etc.</p>
 <p>Per page: <code>pandoc</code> supports YAML blocks, this is self-explanatory example:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode yaml"><code class="sourceCode yaml"><a class="sourceLine" id="cb1-1" title="1"><span class="ot">---</span></a>
 <a class="sourceLine" id="cb1-2" title="2"><span class="fu">title:</span><span class="at"> </span><span class="st">&quot;Example title&quot;</span></a>
 <a class="sourceLine" id="cb1-3" title="3"><span class="fu">author:</span><span class="at"> </span><span class="st">&quot;author&quot;</span></a>
-<a class="sourceLine" id="cb1-4" title="4"><span class="fu">date:</span><span class="at"> 2000-01-21</span></a>
+<a class="sourceLine" id="cb1-4" title="4"><span class="fu">date:</span><span class="at"> 2020-01-21</span></a>
 <a class="sourceLine" id="cb1-5" title="5"><span class="ot">---</span></a></code></pre></div>
 <p>I recommend you to keep the block on the top of the file. See <a href="https://pandoc.org/MANUAL.html#extension-yaml_metadata_block">pandoc documentation</a> for more details.</p>
 <h2>Customize</h2>
-<p>To change index page simply edit this readme or configure <code>tundra.sh</code> to point at your index.md file. See configuration above.</p>
+<p>To change index page simply edit this readme or configure <code>tundra.sh</code> to point at your index.md file. See <code>configure</code> above.</p>
 <p>To make new blog posts add source files to posts folder.</p>
 <p>Run <code>./tundra.sh -h</code> to see available options.</p>
-<p>Todo: custom themes, custom page layout.</p>
-<h2>Roadmap</h2>
-<ul>
-<li>multiple i/o formats support out od the box (*atm only by editing the pandoc calls)</li>
-<li>output to docs folder option(for gh pages)</li>
-<li>new themes</li>
-<li>better configuration</li>
-</ul>
 <h2>License</h2>
 <p>Public domain.</p>
             </div>

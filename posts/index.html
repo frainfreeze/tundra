@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <head>
-<title>Blog archive</title>
+<title>blog archive</title>
 <!-- archive sort -->
-<script type="text/javascript" src="//code.jquery.com/jquery-1.7.1.js"></script>
 <script type="text/javascript">
 $(function(){
       
@@ -38,7 +37,8 @@ function sortUnorderedList(ul, sortDescending, sortClass) {
 }
 
 window.onload = function() {
-  var desc = false;
+  var desc = true;
+  sortUnorderedList("list", desc, "date");
   document.getElementById("test").onclick = function() {
     sortUnorderedList("list", desc, "date");
     desc = !desc;
@@ -56,7 +56,7 @@ window.onload = function() {
 
 </script>
 <!-- #archive sort -->
-<link rel="stylesheet" href="../res/basic/style.css">
+<link rel="stylesheet" href="../res/style.css">
 <!-- navbar -->
 <style>
 .nav {
@@ -170,11 +170,11 @@ window.onload = function() {
     <a href="../index.html">&larr; Home</a>
   </div>
 </div>
-<!-- #navbar -->
-  <h1>Archive</h1><input class="button-shadow" type="button" id="test" value="sort by date"/>
+<!-- #navbar --><h2>Blog archive</h2>
+<input class="button-shadow" type="button" id="test" value="sort by date"/>
 <input class="button-shadow" type="button" id="test1" value="sort by title"/>
 <ul id="list">
 <li><span class="date">2018-01-16</span> - <a href="bcpptgp.html"><span class=post-title>Beginning C++ Through Game Programming</span></a></li>
-<li><span class="date">2018-02-21</span> - <a href="matrix.html"><span class=post-title>Programmer Competency Matrix extended</span></a></li>
+<li><span class="date">2018-02-21</span> - <a href="matrix.html"><span class=post-title>Programmer Competency Matrix</span></a></li>
 <li><span class="date">2018-09-18</span> - <a href="post0.html"><span class=post-title>Markdown cheatsheet</span></a></li>
 </ul></body></html>

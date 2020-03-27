@@ -1,5 +1,5 @@
 #!/bin/sh
-# tundra.sh v0.5
+# tundra.sh v1.0
 
 ########## Configuration ###########
 AUTHOR="frainfreeze"
@@ -7,13 +7,13 @@ BLOG_TITLE="frainfreeze's example blog for tundra.sh"
 
 ROOT=`pwd`
 INDEX_PATH=README.md
-INDEX_RES=res/basic
+INDEX_RES=res
 
 POSTS_PATH=posts
-POSTS_RES=../res/basic
+POSTS_RES=../res
 
 PAGES_PATH=pages
-PAGES_RES=../res/basic
+PAGES_RES=../res
 
 # MD_FLAVOUR tells pandoc what markdown flavour to use,
 # +yaml_met... turns on yaml meta data option in pandoc
@@ -21,7 +21,6 @@ MD_FLAVOUR="markdown_github+yaml_metadata_block"
 
 
 ######### Implementation ##########
-
 AWK=`which gawk || which awk`
 SED=`which gsed || which sed`
 
@@ -38,7 +37,9 @@ usage() {
 gen_archive(){
     echo "Generating archive"
     cd $POSTS_PATH
-    cat $ROOT/res/basic/blog-index.Thtml > index.html
+    cat $ROOT/res/blog-index.Thtml > index.html
+
+    echo "<h2>Blog archive</h2>" >> index.html
     echo "<input class=\"button-shadow\" type=\"button\" id=\"test\" value=\"sort by date\"/>" >> index.html
     echo "<input class=\"button-shadow\" type=\"button\" id=\"test1\" value=\"sort by title\"/>" >> index.html
     echo "<ul id=\"list\">" >> index.html
@@ -47,7 +48,7 @@ gen_archive(){
         if [ "$url" != "index.html" ]
         then
             title=`$AWK -vRS="</title>" '/<title>/{gsub(/.*<title>|\n+/,"");print;exit}' $url`
-            date=`$AWK -vRS="</p></li>" '/<li><p class="navbar-text date">/{gsub(/.*<li><p class="navbar-text date">|\n+/,"");print;exit}' $url`
+           date=`cat $url | $SED -rn "/<meta .*name=.date./ s/.*content=.([0-9-]+).*/\1/p"`
             echo "<li><span class=\"date\">$date</span> - <a href=\"$url\"><span class="post-title">$title</span></a></li>" >> index.html
         fi
     done
