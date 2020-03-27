@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html>
 <head>
-<meta charset="utf-8" />
-<title>Blog archive</title>
+<title>blog archive</title>
 <!-- archive sort -->
 <script type="text/javascript">
+$(function(){
+      
 function sortUnorderedList(ul, sortDescending, sortClass) {
   if (typeof ul == "string") {
     ul = document.getElementById(ul);
@@ -52,9 +52,11 @@ window.onload = function() {
   }
 }
 
+});
+
 </script>
 <!-- #archive sort -->
-<link rel="stylesheet" href="../res/basic/style.css">
+<link rel="stylesheet" href="../res/style.css">
 <!-- navbar -->
 <style>
 .nav {
@@ -169,4 +171,3 @@ window.onload = function() {
   </div>
 </div>
 <!-- #navbar -->
-  <h1>Archive</h1>

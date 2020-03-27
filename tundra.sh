@@ -1,5 +1,5 @@
 #!/bin/sh
-# tundra.sh v0.5
+# tundra.sh v1.0
 
 ########## Configuration ###########
 AUTHOR="frainfreeze"

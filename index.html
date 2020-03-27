@@ -74,13 +74,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <div class="container">
     <div class="row">
             <div class="span12">
-            <h1 align="center">tundra.sh - v0.5</h1>
+            <h1 align="center">tundra.sh - v1.0</h1>
 <div align="center">
   <strong>Static pages generator.</strong>
 </div>
 <div align="center">
   <code>tundra.sh</code> is written in shell and depends only on pandoc
-  <img alt="mock-up" src="https://i.imgur.com/uxQfPeE.png">
+  <img alt="mock-up" src="mock.png">
 </div>
 <h2>Features</h2>
 <ul>
@@ -89,7 +89,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>fast and simple to setup and configure</li>
 <li>minimal dependencies: just the <code>pandoc</code> on unix-like systems</li>
 <li>generates static content: easy to host anywhere</li>
-<li>syntax highlighting for over 100 languages, out of the box</li>
+<li>syntax highlighting out of the box</li>
 <li>blog friendly</li>
 </ul>
 <h2>Demos</h2>
@@ -115,17 +115,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <a class="sourceLine" id="cb1-5" title="5"><span class="ot">---</span></a></code></pre></div>
 <p>I recommend you to keep the block on the top of the file. See <a href="https://pandoc.org/MANUAL.html#extension-yaml_metadata_block">pandoc documentation</a> for more details.</p>
 <h2>Customize</h2>
-<p>To change index page simply edit this readme or configure <code>tundra.sh</code> to point at your index.md file. See configuration above.</p>
+<p>To change index page simply edit this readme or configure <code>tundra.sh</code> to point at your index.md file. See <code>configure</code> above.</p>
 <p>To make new blog posts add source files to posts folder.</p>
 <p>Run <code>./tundra.sh -h</code> to see available options.</p>
-<p>Todo: custom themes, custom page layout.</p>
-<h2>Roadmap</h2>
-<ul>
-<li>multiple i/o formats support out of the box (*atm only by editing the pandoc calls)</li>
-<li>output to docs folder option (for gh pages)</li>
-<li>new themes</li>
-<li>better configuration</li>
-</ul>
 <h2>License</h2>
 <p>Public domain.</p>
             </div>

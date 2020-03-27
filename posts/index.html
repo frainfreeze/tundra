@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html>
 <head>
-<meta charset="utf-8" />
-<title>Blog archive</title>
+<title>blog archive</title>
 <!-- archive sort -->
 <script type="text/javascript">
+$(function(){
+      
 function sortUnorderedList(ul, sortDescending, sortClass) {
   if (typeof ul == "string") {
     ul = document.getElementById(ul);
@@ -52,9 +52,11 @@ window.onload = function() {
   }
 }
 
+});
+
 </script>
 <!-- #archive sort -->
-<link rel="stylesheet" href="../res/basic/style.css">
+<link rel="stylesheet" href="../res/style.css">
 <!-- navbar -->
 <style>
 .nav {
@@ -168,13 +170,11 @@ window.onload = function() {
     <a href="../index.html">&larr; Home</a>
   </div>
 </div>
-<!-- #navbar -->
-  <h1>Archive</h1>
-<h2>Blog archive</h2>
+<!-- #navbar --><h2>Blog archive</h2>
 <input class="button-shadow" type="button" id="test" value="sort by date"/>
 <input class="button-shadow" type="button" id="test1" value="sort by title"/>
 <ul id="list">
 <li><span class="date">2018-01-16</span> - <a href="bcpptgp.html"><span class=post-title>Beginning C++ Through Game Programming</span></a></li>
-<li><span class="date">2018-02-21</span> - <a href="matrix.html"><span class=post-title>Programmer Competency Matrix extended</span></a></li>
+<li><span class="date">2018-02-21</span> - <a href="matrix.html"><span class=post-title>Programmer Competency Matrix</span></a></li>
 <li><span class="date">2018-09-18</span> - <a href="post0.html"><span class=post-title>Markdown cheatsheet</span></a></li>
 </ul></body></html>

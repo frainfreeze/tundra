@@ -30,46 +30,64 @@ $for(header-includes)$
   $header-includes$
 $endfor$
 </head>
-<body>
+
+
+<body data-gr-c-s-loaded="true">
+
   $if(title)$
-  <div class="navbar navbar-static-top">
-    <div class="navbar-inner">
-      <div class="container">
-        <span class="doc-title">$title$</span>
-        <ul class="nav pull-right doc-info">
-          $for(author)$
-          <li><p class="navbar-text">$author$</p></li>
-          $endfor$
-          $if(date)$
-          <li><p class="navbar-text date">$date$</p></li>
-          $endif$
-        </ul>
-      </div>
-    </div>
+  <div class="ui main text container">
+    <h1 class="ui header">$title$</h1>
+    <p>
+    $if(short)$
+    $short$
+    $endif$
+    $if(tags)$
+      <b>Tags: </b>
+      $for(tags)$
+      $tags$
+      $endfor$
+    $endif$
+    </p>
   </div>
   $endif$
-  <div class="container">
-    <div class="row">
-      $if(toc)$
-      <div id="$idprefix$TOC" class="span3">
-        <div class="well toc">
-        <ul>
-          <li class="nav-header">Table of Contents</li>
-        </ul>
-        $toc$
+
+  <div class="ui borderless main menu" style="">
+    <div class="ui text container">
+      <div class="header item">
+        <a href="../"><img class="logo" src="../favicon.ico"></a>
+        frainfreeze's blog
         </div>
+      <a href="../pages/bookshelf.html" class="item">Reading</a>
+      <a href="../posts" class="item">Archive</a>
+      <a href="../pages/about.html" class="ui right floated item">
+        About me
+      </a>
+    </div>
+  </div><div class="ui borderless main menu placeholder" style="display: none;">
+    <div class="ui text container">
+      <div class="header item">
+        <a href="../"><img class="logo" src="../favicon.ico"></a>
+        frainfreeze's blog
       </div>
-      $endif$
-      <div class="span$if(toc)$9$else$12$endif$">
-      $for(include-before)$
+      <a href="../pages/books.html" class="item">Reading</a>
+      <a href="../posts" class="item">Archive</a>
+      <a href="../pages/about.html" class="ui right floated item">
+        About me
+      </a>
+    </div>
+  </div>
+
+  <div class="ui text container">
+    $for(include-before)$
       $include-before$
       $endfor$
       $body$
       $for(include-after)$
       $include-after$
       $endfor$
-      </div>
     </div>
   </div>
-</body>
-</html>
+
+
+
+</body></html>
