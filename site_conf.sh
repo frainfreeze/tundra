@@ -1,5 +1,5 @@
 # We want custom site author, title and location so we set them here
-export AUTHOR="tkucar"
+export SITE_AUTHOR="tkucar"
 export BLOG_TITLE="tom's travel log"
 export SITE_LOCATION="https://triglex.com/~tkucar"
 

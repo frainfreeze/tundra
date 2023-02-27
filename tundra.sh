@@ -4,7 +4,7 @@
 
 
 ########## Configuration ###########
-AUTHOR="Author unset."
+SITE_AUTHOR="Author unset."
 BLOG_TITLE="Hello, world!"
 SITE_LOCATION=`.`
 
@@ -78,7 +78,9 @@ build_sources() {
     if [ ! -z ${INDEX_PATH+x} ]; 
     then
         echo "\tBuilding index"
-        pandoc -f $MD_FLAVOUR $INDEX_PATH -o "index.html" --template $INDEX_RES/index.thtml --css=$INDEX_RES/style.css --metadata site-url="$ROOT"
+        pandoc -f $MD_FLAVOUR $INDEX_PATH -o "index.html" --template $INDEX_RES/index.thtml --css=$INDEX_RES/style.css \
+        --metadata site-url="$ROOT" \
+        --metadata site-author="$SITE_AUTHOR"
     fi
 
     # build blog
@@ -103,7 +105,9 @@ build_sources() {
         cd $PAGES_PATH
         for page in *.md;
         do
-            pandoc -f $MD_FLAVOUR $page -o "${page%.*}.html" --template $PAGES_RES/index.thtml --css=$PAGES_RES/style.css
+            pandoc -f $MD_FLAVOUR $page -o "${page%.*}.html" --template $PAGES_RES/index.thtml --css=$PAGES_RES/style.css \
+            --metadata site-url="$ROOT" \
+            --metadata site-author="$SITE_AUTHOR"
         done
         cd $ROOT
     fi

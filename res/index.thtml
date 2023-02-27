@@ -56,8 +56,11 @@ $endfor$
   
   $for(site-url)$
   <hr>
-  <div align="center">
-  <a href="$site-url$/index.html">Home</a>
+  <div style="display: flex; width: 100%; justify-content: space-between;">
+    <a href="$site-url$/index.html">Home</a>
+    <p style="margin-left: auto; margin:0">
+      © $for(site-author)$ $site-author$ $endfor$
+    </p>
   </div>
   $endfor$
   
