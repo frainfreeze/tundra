@@ -1,5 +1,7 @@
 ---
 title: "tundra.sh - static pages generator"
+author:
+- tom
 ---
 
 <h1 align="center">tundra.sh - v2.0</h1>
@@ -54,13 +56,13 @@ The values are following:
 | ----------- | ----------- |
 | AUTHOR      | Site author |
 | BLOG_TITLE  | Blog subtitle |
-| ROOT | Site working directory, defaults to directory tundra.sh is in |
-| SITE_RES | Global site resources (scripts, styles), defaults to ROOT/res |
+| SITE_ROOT | Site working directory, defaults to directory tundra.sh is in |
+| SITE_RES | Global site resources (scripts, styles), defaults to SITE_ROOT/res |
 | INDEX_PATH | Location of site index file, defaults to README.md |
 | INDEX_RES | Location of site's index file resource folder, defaults to SITE_RES |
-| POSTS_PATH  | Location of sites blog posts, defaults to ROOT/posts |
+| POSTS_PATH  | Location of sites blog posts, defaults to SITE_ROOT/posts |
 | POSTS_RES | Location of site's blog posts resource folder, defaults to SITE_RES |
-| PAGES_PATH | Location of sites sub-pages, defaults to ROOT/pages |
+| PAGES_PATH | Location of sites sub-pages, defaults to SITE_ROOT/pages |
 | PAGES_RES | Location of site's subpages resource folder, defaults to SITE_RES |
 | MD_FLAVOUR | Site's markdown flavour. defauts to markdown_github+yaml_metadata_block |
 

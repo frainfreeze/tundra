@@ -1,21 +1,18 @@
-# We want custom site author and title so we set them here
-export AUTHOR="frainfreeze"
-export BLOG_TITLE="frainfreeze's example blog for tundra.sh"
-
+# We want custom site author, title and location so we set them here
+export AUTHOR="tkucar"
+export BLOG_TITLE="tom's travel log"
+export SITE_LOCATION="https://triglex.com/~tkucar"
 
 # Other defaults are OK so we won't change them.
-# I included them here for the reference.
+# I've included them here for the reference.
+# ROOT=`pwd`
+# SITE_RES=$ROOT/res
 
-#export ROOT=`pwd`
-#export SITE_RES=$ROOT/res
+#INDEX_PATH=README.md
+#INDEX_RES=$ROOT/res
 
-#export INDEX_PATH=$ROOT/README.md
-#export INDEX_RES=$ROOT/res
+#POSTS_PATH=posts
+#POSTS_RES=$ROOT/res
 
-#export POSTS_PATH=$ROOT/posts
-#export POSTS_RES=$ROOT/res
-
-#export PAGES_PATH=$ROOT/pages
-#export PAGES_RES=$ROOT/res
-
-#export MD_FLAVOUR="markdown_github+yaml_metadata_block"
+#PAGES_PATH=pages
+#PAGES_RES=$ROOT/res
