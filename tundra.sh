@@ -1,23 +1,31 @@
 #!/bin/sh
-# tundra.sh v1.0
+# tundra.sh v1.0 - CC0 public domain
+# https://github.com/frainfreeze/tundra
+
 
 ########## Configuration ###########
-AUTHOR="frainfreeze"
-BLOG_TITLE="frainfreeze's example blog for tundra.sh"
+SITE_AUTHOR="Author unset."
+BLOG_TITLE="Hello, world!"
+SITE_LOCATION=`.`
 
 ROOT=`pwd`
+SITE_RES=$ROOT/res
+
 INDEX_PATH=README.md
-INDEX_RES=res
+INDEX_RES=$ROOT/res
 
 POSTS_PATH=posts
-POSTS_RES=../res
+POSTS_RES=$ROOT/res
 
 PAGES_PATH=pages
-PAGES_RES=../res
+PAGES_RES=$ROOT/res
 
 # MD_FLAVOUR tells pandoc what markdown flavour to use,
 # +yaml_met... turns on yaml meta data option in pandoc
 MD_FLAVOUR="markdown_github+yaml_metadata_block"
+
+# Load custom configuration if it exists.
+[ -e ./site_conf.sh ] && . ./site_conf.sh
 
 
 ######### Implementation ##########
@@ -37,7 +45,7 @@ usage() {
 gen_archive(){
     echo "Generating archive"
     cd $POSTS_PATH
-    cat $ROOT/res/blog-index.Thtml > index.html
+    cat $ROOT/res/blog-index.thtml > index.html
 
     echo "<h2>Blog archive</h2>" >> index.html
     echo "<input class=\"button-shadow\" type=\"button\" id=\"test\" value=\"sort by date\"/>" >> index.html
@@ -60,14 +68,19 @@ gen_archive(){
 }
 
 build_sources() {
-    echo "Building sources..."
+    # If it exists run the pre script.
+    [ -e res/pre.sh ] && . res/pre.sh
+    
+    echo "Building the site..."
     START_TIME=$(date +%s)
     
     # build index
     if [ ! -z ${INDEX_PATH+x} ]; 
     then
         echo "\tBuilding index"
-        pandoc -f $MD_FLAVOUR $INDEX_PATH -o "index.html" --template $INDEX_RES/index.Thtml --css=$INDEX_RES/style.css
+        pandoc -f $MD_FLAVOUR $INDEX_PATH -o "index.html" --template $INDEX_RES/index.thtml --css=$INDEX_RES/style.css \
+        --metadata site-url="$ROOT" \
+        --metadata site-author="$SITE_AUTHOR"
     fi
 
     # build blog
@@ -78,7 +91,7 @@ build_sources() {
         cd $POSTS_PATH
         
         for f in *.md; do 
-            pandoc -f $MD_FLAVOUR "$f" -s -o "${f%.*}.html" --template $POSTS_RES/blog.Thtml --css=$POSTS_RES/style.css
+            pandoc -f $MD_FLAVOUR "$f" -s -o "${f%.*}.html" --template $POSTS_RES/blog.thtml --css=$POSTS_RES/style.css
         done
         
         cd $ROOT
@@ -92,15 +105,22 @@ build_sources() {
         cd $PAGES_PATH
         for page in *.md;
         do
-            pandoc -f $MD_FLAVOUR $page -o "${page%.*}.html" --template $PAGES_RES/index.Thtml --css=$PAGES_RES/style.css
+            pandoc -f $MD_FLAVOUR $page -o "${page%.*}.html" --template $PAGES_RES/index.thtml --css=$PAGES_RES/style.css \
+            --metadata site-url="$ROOT" \
+            --metadata site-author="$SITE_AUTHOR"
         done
         cd $ROOT
     fi
 
     END_TIME=$(($(date +%s) - $START_TIME))
-    echo "Sources built in $(($END_TIME/60)) min $(($END_TIME%60)) sec" 
+    echo "Sources built in $(($END_TIME/60)) min $(($END_TIME%60)) sec"
+
+    # If it exists run the post script.
+    [ -e res/post.sh ] && . res/post.sh
 }
 
+
+######### CLI ##########
 if [ -z "$1" ] 
 then
   usage
@@ -114,8 +134,10 @@ while [ "$1" != "" ]; do
             exit 0
             ;;
         -i | --index)
+        # Allow user to set custom index file from the CLI.
             if [ "$2" != "" ]; then
                 INDEX_PATH=$2
+                # Build the site.
                 build_sources
             else
                 echo "You must specify index file when using -i/--index!"
@@ -123,12 +145,13 @@ while [ "$1" != "" ]; do
             exit 0
             ;;
         -b | --build)
+            # Build the site.
             build_sources
             exit 0
             ;;
         -c | --clean)
-            find . -type f -iname "*.html" -delete
-            echo "Deleted all html files!"
+            # If it exists run the clean script.
+            [ -e res/clean.sh ] && . res/clean.sh
             exit 0
             ;;
         *)

@@ -2,7 +2,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta http-equiv="Content-Style-Type" content="text/css" />
-  <meta name="generator" content="pandoc" />
+  <meta name="generator" content="tundra.sh v2 using pandoc" />
 $for(author-meta)$
   <meta name="author" content="$author-meta$" />
 $endfor$
@@ -53,5 +53,16 @@ $endfor$
       </div>
     </div>
   </div>
+  
+  $for(site-url)$
+  <hr>
+  <div style="display: flex; width: 100%; justify-content: space-between;">
+    <a href="$site-url$/index.html">Home</a>
+    <p style="margin-left: auto; margin:0">
+      © $for(site-author)$ $site-author$ $endfor$
+    </p>
+  </div>
+  $endfor$
+  
 </body>
 </html>
